@@ -1,54 +1,64 @@
-import React from 'react';
-import Page from '../../components/page';
-import Meta from '../../components/Meta';
+import { useState, useEffect } from 'react';
+import {
+  Button,
+  Grid,
+  Header,
+  Container
+} from 'semantic-ui-react';
 import fs from 'fs';
 import path from 'path';
-import { Portfolio } from '../../types/portfolio.types';
-import { GetStaticProps, GetStaticPaths } from 'next';
+import Page from '../../components/page';
+import Meta from '../../components/Meta';
+import { shuffle } from '../../util/helpers';
+import { GetStaticProps } from 'next';
 
-  //TODO update portfolio object for dynamic PM portfolio
-export default function ProductPage({ project }: { project: any }) {
+export default function Project({ companies }: { companies: any[] }) {
 
   return (
-    <>
+    <div>
       <Meta
-        title='Portfolio Not Found'
-        desc={project.summary}
-        canonical={`https://product.makr.io/${project.slug}`}
-        image='' />
+        title='Projects'
+        desc='Open-source project to help Product Managers make portfolio pages and improve their job hunt.'
+        canonical='https://product.makr.io/' />
 
       <Page>
-        <ProductContainer portfolio={portfolio} />
+        <Container style={{ width: '100vw', margin: '3em 0' }}>
+          <Grid
+            container
+            stackable
+            textAlign='center'
+            verticalAlign='middle'>
+            <Grid.Row style={{ padding: '0.5em' }}>
+              <Grid.Column>
+
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
       </Page>
-    </>
+    </div >
   )
 }
 
-// export const getStaticPaths: GetStaticPaths = async () => {
+// export const getStaticProps: GetStaticProps = async () => {
 //   const companiesDirectory = path.join(process.cwd(), '/public/data/companies')
 //   const filenames = fs.readdirSync(companiesDirectory)
 
-//   const paths = filenames.map((filename) => {
+//   const companies = filenames.map((filename) => {
 //     const filePath = path.join(companiesDirectory, filename)
 //     const fileContents = fs.readFileSync(filePath, 'utf8')
-//     const slug = JSON.parse(fileContents).slug
 
 //     return {
-//       params: {
-//         portfolio: slug
-//       }
+//       filename,
+//       data: JSON.parse(fileContents),
 //     }
 //   })
-//   return { paths, fallback: false }
-// }
-
-// export const getStaticProps: GetStaticProps = async context => {
-//   const portfolioFile = path.join(process.cwd(), `/public/data/companies/${context.params.portfolio}.json`)
-//   const fileContents = fs.readFileSync(portfolioFile, 'utf8')
+//   //Shuffle array of companies
+//   shuffle(companies);
 
 //   return {
 //     props: {
-//       portfolio: JSON.parse(fileContents)
+//       companies
 //     },
 //   }
 // }
