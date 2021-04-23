@@ -1,0 +1,87 @@
+{
+  "name": "Your name",
+  "email": "name@EXAMPLE.com - be mindful when using email publicly",
+  "title": "Product Manager",
+  "summary": "SUPPORTS MARKDOWN - Short bio summary",
+  "blog": "https://EXAMPLE.com OR https://USERNAME.medium.com OR https://medium.com/@USERNAME OR https://USERNAME.substack.com OR https://EXAMPLE.com",
+  "podcast": "Link to podcast you made OR podcast interview you were featured in",
+  "resume": "https://EXAMPLE.com/resume.pdf",
+  "profiles": [
+    {
+      "network": "LinkedIn",
+      "username": "USERNAME",
+      "url": "https://linkedin.com/in/USERNAME",
+      "icon": "linkedin"
+    },
+    {
+      "network": "Twitter",
+      "username": "USERNAME",
+      "url": "https://twitter.com/USERNAME",
+      "icon": "twitter"
+    },
+    {
+      "network": "GitHub",
+      "username": "USERNAME",
+      "url": "https://github.com/USERNAME",
+      "icon": "github"
+    },
+    {
+      "network": "Product Hunt",
+      "username": "USERNAME",
+      "url": "https://producthunt.com/@USERNAME",
+      "icon": "product hunt"
+    },
+    {
+      "network": "YouTube",
+      "username": "USERNAME",
+      "url": "https://www.youtube.com/user/USERNAME OR https://www.youtube.com/c/USERNAME OR https://www.youtube.com/channel/USERNAME",
+      "icon": "youtube"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "project-slug-NO-SPACES",
+      "title": "Awesome Example App",
+      "summary": "This is a quick summary of Awesome Example App",
+      "role": "Product Manager, Designer, Developer etc",
+      "status": "Live | Dead | WIP",
+      "links": [
+        {
+          "text": "Download app | View website | Read case study | etc",
+          "url": "https://MyExampleApp.com",
+          "icon": ""
+        },
+        {
+          "text": "Get source code",
+          "url": "https://github.com/USERNAME/REPO-NAME",
+          "icon": ""
+        }
+      ],
+      "testimonials": [
+        {
+          "name": "Jane Smith",
+          "text": "This app is awesome..."
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "slug": "case-slug-NO-SPACES",
+      "title": "Awesome Example App",
+      "summary": "This is a quick summary of Awesome Example App",
+      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+    }
+  ],
+  "endorsements": [
+    {
+      "name": "Jane Smith",
+      "text": "I worked with..."
+    }
+  ],
+  "theme": {
+    "accentColor": "",
+    "emoji": "",
+    "quote": ""
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "René DeAnda",
+  "email": "rene@deanda.org",
+  "title": "Product Manager",
+  "summary": "",
+  "blog": "https://rede.io",
+  "podcast": "https://soundcloud.com/delightfultoday",
+  "resume": "https://EXAMPLE.com/resume.pdf",
+  "profiles": [
+    {
+      "network": "LinkedIn",
+      "username": "renedeanda",
+      "url": "https://linkedin.com/in/renedeanda",
+      "icon": "linkedin"
+    },
+    {
+      "network": "Twitter",
+      "username": "redeio",
+      "url": "https://twitter.com/redeio",
+      "icon": "twitter"
+    },
+    {
+      "network": "GitHub",
+      "username": "renedeanda",
+      "url": "https://github.com/renedeanda",
+      "icon": "github"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "project-slug-NO-SPACES",
+      "title": "Awesome Example App",
+      "summary": "This is a quick summary of Awesome Example App",
+      "role": "Product Manager, Designer, Developer etc",
+      "status": "Live | Dead | WIP",
+      "links": [
+        {
+          "text": "Download app | View website | Read case study | etc",
+          "url": "https://MyExampleApp.com",
+          "icon": ""
+        },
+        {
+          "text": "Get source code",
+          "url": "https://github.com/USERNAME/REPO-NAME",
+          "icon": ""
+        }
+      ],
+      "testimonials": [
+        {
+          "name": "Jane Smith",
+          "text": "This app is awesome..."
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "slug": "case-slug-NO-SPACES",
+      "title": "Awesome Example App",
+      "summary": "This is a quick summary of Awesome Example App",
+      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+    }
+  ],
+  "endorsements": [
+    {
+      "name": "Jane Smith",
+      "text": "I worked with..."
+    }
+  ],
+  "theme": {
+    "accentColor": "",
+    "emoji": "🔭",
+    "quote": "\"Be yourself; everyone else is already taken.\" - Oscar Wilde"
+  }
+}

@@ -1,0 +1,145 @@
+.card-link {
+    color: #555B66;
+}
+
+.card-link:hover {
+    color: #0C5FFF;
+}
+
+.nav-header {
+    display: none;
+}
+
+.Navbar {
+    text-transform: uppercase;
+    height: 56px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 90;
+}
+
+.navbar-text {
+    text-transform: uppercase;
+    color: #555B66;
+    font-size: 1.5em;
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.navbar-text:hover {
+    color: #0C5FFF;
+    font-size: 1.5em;
+    display: block;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.navbar-text2 {
+    color: #555B66;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.navbar-text2:hover {
+    color: #0C5FFF;
+}
+
+.ui.secondary.menu a.item.button-item {
+    display: none;
+}
+
+.ui.secondary.menu a.item.hamburger-item {
+    color: #555B66;
+    display: block;
+}
+
+.ui.secondary.menu a.item.main-item:hover, .ui.secondary.menu a.item.hamburger-item:hover {
+    background: transparent;
+}
+
+.card-title {
+    color: #1A202C;
+    position: 'relative';
+    font-size: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.card-image-header {
+    z-index: 1;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+    object-position: 0 0%;
+}
+
+.card-avatar {
+    z-index: 2;
+    position: relative;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    border: 2px double #e2e8f0;
+}
+
+.card-avatar-big {
+    z-index: 2;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px double #e2e8f0;
+}
+
+.tagline {
+    color: #555B66;
+    height: 42px;
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+@media only screen and (min-width: 720px) {
+    .navbar-text {
+        font-size: 1.8em;
+        display: block;
+    }
+    .navbar-text:hover {
+        color: #0C5FFF;
+        font-size: 1.8em;
+        display: block;
+    }
+    .ui.secondary.menu a.item.button-item {
+        display: block;
+    }
+    .ui.secondary.menu a.item.hamburger-item {
+        display: none;
+    }
+    .ui.right.sidebar.sidebar-menu {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        visibility: hidden;
+    }
+    .nav-header {
+        display: flex;
+    }
+    .Navbar {
+        display: none;
+    }
+}
