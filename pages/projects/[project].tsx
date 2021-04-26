@@ -1,27 +1,34 @@
-import { useState, useEffect } from 'react';
 import {
-  Button,
   Grid,
-  Header,
   Container
 } from 'semantic-ui-react';
 import fs from 'fs';
 import path from 'path';
 import Page from '../../components/page';
 import Meta from '../../components/Meta';
-import { shuffle } from '../../util/helpers';
-import { GetStaticProps } from 'next';
+import { Portfolio } from '../../types/portfolio.types';
+import { GetStaticProps, GetStaticPaths } from 'next';
+import { Project } from '../../types/project.types';
+import matter from 'gray-matter';
+import ReactMarkdown from 'react-markdown';
 
-export default function Project({ companies }: { companies: any[] }) {
+//TODO change case reference to project because copy & pasted
+export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
+  portfolio: Portfolio,
+  myProject: Project,
+  mdData: any,
+  mdContent: any
+}) {
 
+  //TODO revisit, load markdown files properly & get data for initial props
   return (
     <div>
       <Meta
-        title='Projects'
-        desc='Open-source project to help Product Managers make portfolio pages and improve their job hunt.'
-        canonical='https://product.makr.io/' />
+        title={`${myProject.title} | ${portfolio.name}`}
+        desc={`${myProject.summary}`}
+        canonical={`${process.env.PUBLIC_URL}/projects/${myProject.slug}`} />
 
-      <Page>
+      <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '3em 0' }}>
           <Grid
             container
@@ -30,7 +37,8 @@ export default function Project({ companies }: { companies: any[] }) {
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '0.5em' }}>
               <Grid.Column>
-
+                <p>{myProject.title}</p>
+                <ReactMarkdown children={mdContent} />
               </Grid.Column>
             </Grid.Row>
           </Grid>
@@ -40,25 +48,45 @@ export default function Project({ companies }: { companies: any[] }) {
   )
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const companiesDirectory = path.join(process.cwd(), '/public/data/companies')
-//   const filenames = fs.readdirSync(companiesDirectory)
+export const getStaticPaths: GetStaticPaths = async () => {
+  const projectsDirectory = path.join(process.cwd(), '/data/md/projects')
+  const filenames = fs.readdirSync(projectsDirectory)
 
-//   const companies = filenames.map((filename) => {
-//     const filePath = path.join(companiesDirectory, filename)
-//     const fileContents = fs.readFileSync(filePath, 'utf8')
+  const paths = filenames.map((filename) => {
+    const slug = filename.replace(/\.md$/, '')
+    return {
+      params: {
+        project: slug
+      }
+    }
+  })
+  return { paths, fallback: false }
+}
 
-//     return {
-//       filename,
-//       data: JSON.parse(fileContents),
-//     }
-//   })
-//   //Shuffle array of companies
-//   shuffle(companies);
 
-//   return {
-//     props: {
-//       companies
-//     },
-//   }
-// }
+export const getStaticProps: GetStaticProps = async context => {
+  const projectName = context.params.project
+  const dataDirectory = path.join(process.cwd(), '/data')
+  const filename = 'me.json'
+
+  const filePath = path.join(dataDirectory, filename)
+  const fileContents = fs.readFileSync(filePath, 'utf8')
+  const portfolio = JSON.parse(fileContents)
+
+  //Load specific case from me.json
+  const myProject = portfolio.projects.find((currentProject: Project) => currentProject.slug == projectName)
+
+  //Load specific case markdown file
+  const projectFile = path.join(process.cwd(), `/data/md/projects/${projectName}.md`)
+  const projectFileContents = fs.readFileSync(projectFile, 'utf8')
+  const { data, content } = matter(projectFileContents)
+
+  return {
+    props: {
+      portfolio,
+      myProject,
+      mdData: data,
+      mdContent: content
+    }
+  }
+}

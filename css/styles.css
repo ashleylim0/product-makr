@@ -25,33 +25,16 @@
 
 .navbar-text {
     text-transform: uppercase;
-    color: #555B66;
+    color: #1A202C;
     font-size: 1.5em;
     display: block;
     font-weight: bold;
-    font-style: italic;
 }
 
 .navbar-text:hover {
     color: #0C5FFF;
-    font-size: 1.5em;
     display: block;
     font-weight: bold;
-    font-style: italic;
-}
-
-.navbar-text2 {
-    color: #555B66;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.navbar-text2:hover {
-    color: #0C5FFF;
-}
-
-.ui.secondary.menu a.item.button-item {
-    display: none;
 }
 
 .ui.secondary.menu a.item.hamburger-item {
@@ -59,7 +42,7 @@
     display: block;
 }
 
-.ui.secondary.menu a.item.main-item:hover, .ui.secondary.menu a.item.hamburger-item:hover {
+.ui.secondary.menu a.item.hamburger-item:hover {
     background: transparent;
 }
 
@@ -115,17 +98,32 @@
     -webkit-box-orient: vertical;
 }
 
+.sidebar-text {
+    color: #555B66;
+    font-size: 1.2em;
+}
+
+.sidebar-text:hover {
+    color: #0C5FFF;
+}
+
+.nav-button-text {
+    color: #555B66;
+    font-size: 1.2em;
+}
+
+.nav-button-text:hover {
+    color: #0C5FFF;
+}
+
 @media only screen and (min-width: 720px) {
     .navbar-text {
-        font-size: 1.8em;
+        font-size: 1.55em;
+        padding: 0.3em;
         display: block;
     }
     .navbar-text:hover {
-        color: #0C5FFF;
-        font-size: 1.8em;
-        display: block;
-    }
-    .ui.secondary.menu a.item.button-item {
+        font-size: 1.55em;
         display: block;
     }
     .ui.secondary.menu a.item.hamburger-item {
