@@ -1,7 +1,7 @@
 import { Card } from 'semantic-ui-react';
 import { Project } from '../types/project.types';
 
-export default function ProjectCard({ project }: {
+export default function Endorsement({ project }: {
   project: Project,
 }) {
 

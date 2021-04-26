@@ -28,15 +28,15 @@
   ],
   "projects": [
     {
-      "slug": "project-slug",
-      "title": "Awesome Example App",
+      "slug": "delightful",
+      "title": "Delightful Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
       "role": "Product Manager, Designer, Developer etc",
-      "status": "Live | Dead | WIP",
+      "status": "Live",
       "links": [
         {
           "text": "Download app | View website | Read case study | etc",
-          "url": "https://MyExampleApp.com",
+          "url": "https://delightfuljournal.com",
           "icon": ""
         },
         {
@@ -51,13 +51,27 @@
           "text": "This app is awesome..."
         }
       ]
+    },
+    {
+      "slug": "blissful",
+      "title": "Blissful Mobile App",
+      "summary": "This is a quick summary of Awesome Example App",
+      "role": "Product Manager, Designer, Developer etc",
+      "status": "Dead",
+      "links": [],
+      "testimonials": [
+        {
+          "name": "Jane Smith",
+          "text": "This app is awesome..."
+        }
+      ]
     }
   ],
   "cases": [
     {
       "slug": "case-slug",
-      "title": "Awesome Example App",
-      "summary": "This is a quick summary of Awesome Example App",
+      "title": "Awesome Case Study OR Blog Post Title",
+      "summary": "This is a quick summary of Awesome Case Study",
       "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
     }
   ],
