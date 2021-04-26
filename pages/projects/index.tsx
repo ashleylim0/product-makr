@@ -9,19 +9,19 @@ import fs from 'fs';
 import path from 'path';
 import Page from '../../components/page';
 import Meta from '../../components/Meta';
-import { shuffle } from '../../util/helpers';
+import { Portfolio } from '../../types/portfolio.types';
 import { GetStaticProps } from 'next';
 
-export default function Projects({ companies }: { companies: any[] }) {
+export default function Projects({ portfolio }: { portfolio: Portfolio }) {
 
   return (
     <div>
       <Meta
-        title='Projects'
-        desc='Open-source project to help Product Managers make portfolio pages and improve their job hunt.'
-        canonical='https://product.makr.io/' />
+        title={`Projects | ${portfolio.name}`}
+        desc={portfolio.summary}
+        canonical={`${process.env.PUBLIC_URL}/projects`} />
 
-      <Page>
+      <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '3em 0' }}>
           <Grid
             container
@@ -40,25 +40,17 @@ export default function Projects({ companies }: { companies: any[] }) {
   )
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const companiesDirectory = path.join(process.cwd(), '/public/data/companies')
-//   const filenames = fs.readdirSync(companiesDirectory)
+export const getStaticProps: GetStaticProps = async () => {
+  const dataDirectory = path.join(process.cwd(), '/data')
+  const filename = 'me.json'
 
-//   const companies = filenames.map((filename) => {
-//     const filePath = path.join(companiesDirectory, filename)
-//     const fileContents = fs.readFileSync(filePath, 'utf8')
+  const filePath = path.join(dataDirectory, filename)
+  const fileContents = fs.readFileSync(filePath, 'utf8')
+  const portfolio = JSON.parse(fileContents)
 
-//     return {
-//       filename,
-//       data: JSON.parse(fileContents),
-//     }
-//   })
-//   //Shuffle array of companies
-//   shuffle(companies);
-
-//   return {
-//     props: {
-//       companies
-//     },
-//   }
-// }
+  return {
+    props: {
+      portfolio
+    }
+  }
+}
