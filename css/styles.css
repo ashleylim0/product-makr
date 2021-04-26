@@ -1,5 +1,22 @@
+::selection {
+    background: #7AFFE1;
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: #7AFFE1;
+    /* Gecko Browsers */
+}
+
+.footer-text {
+    color: #707988;
+    font-size: 1.33em;
+    font-style: italic;
+    padding: 0.5em 0 1em
+}
+
 .card-link {
-    color: #555B66;
+    color: #707988;
 }
 
 .card-link:hover {
@@ -71,13 +88,9 @@
 
 .tagline {
     color: #555B66;
-    height: 42px;
     font-style: italic;
-    overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
-    /* number of lines to show */
     -webkit-box-orient: vertical;
 }
 

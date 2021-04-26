@@ -308,7 +308,7 @@
 }
 .ui.cards > .card > .content > a.header:hover,
 .ui.card > .content > a.header:hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /* Meta */
@@ -427,7 +427,7 @@
 }
 .ui.cards > .card > .extra a:not(.ui):hover,
 .ui.card > .extra a:not(.ui):hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 
@@ -1294,7 +1294,7 @@ a.ui.card:hover,
 }
 .ui.inverted.cards > .card > .extra a:not(.ui):hover,
 .ui.inverted.card > .extra a:not(.ui):hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /* Link card(s) */
