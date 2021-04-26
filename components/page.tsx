@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Link from 'next/link';
 import Navbar from './navbar';
 import Footer from './footer';
 import { Menu, Icon, Sidebar } from 'semantic-ui-react';
@@ -30,12 +31,11 @@ export default function Page({ children, portfolio }: {
             <div className='sidebar-text'>
               <Icon name='close' /></div>
           </Menu.Item>
-          <Menu.Item
-            as='a'
-            href="/about">
-            <div
-              style={{ padding: '0.5em' }}
-              className='sidebar-text'><Icon name='lightbulb outline' />About Me</div>
+          <Menu.Item as='a'>
+            <Link href='/about'>
+              <div style={{ padding: '0.5em' }} className='sidebar-text'>
+                <Icon name='lightbulb outline' />About</div>
+            </Link>
           </Menu.Item>
           {portfolio.blog ?
             <Menu.Item
