@@ -9,19 +9,25 @@ import fs from 'fs';
 import path from 'path';
 import Page from '../components/page';
 import Meta from '../components/Meta';
-import { shuffle } from '../util/helpers';
+import { Portfolio } from '../types/portfolio.types';
 import { GetStaticProps } from 'next';
+import matter from 'gray-matter';
+import ReactMarkdown from 'react-markdown';
 
-export default function About({ companies }: { companies: any[] }) {
+export default function About({ portfolio, mdData, mdContent }: {
+  portfolio: Portfolio,
+  mdData: any,
+  mdContent: any
+}) {
 
   return (
     <div>
       <Meta
-        title='About'
-        desc='Open-source project to help Product Managers make portfolio pages and improve their job hunt.'
-        canonical='https://product.makr.io/' />
+        title={`About | ${portfolio.name}`}
+        desc={portfolio.summary}
+        canonical={`${process.env.PUBLIC_URL}/about`} />
 
-      <Page>
+      <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '3em 0' }}>
           <Grid
             container
@@ -30,7 +36,8 @@ export default function About({ companies }: { companies: any[] }) {
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '0.5em' }}>
               <Grid.Column>
-                
+                <p>{mdData.title}</p>
+                <ReactMarkdown children={mdContent} />
               </Grid.Column>
             </Grid.Row>
           </Grid>
@@ -40,25 +47,24 @@ export default function About({ companies }: { companies: any[] }) {
   )
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const companiesDirectory = path.join(process.cwd(), '/public/data/companies')
-//   const filenames = fs.readdirSync(companiesDirectory)
+export const getStaticProps: GetStaticProps = async () => {
+  const dataDirectory = path.join(process.cwd(), '/data')
+  const filename = 'me.json'
 
-//   const companies = filenames.map((filename) => {
-//     const filePath = path.join(companiesDirectory, filename)
-//     const fileContents = fs.readFileSync(filePath, 'utf8')
+  const filePath = path.join(dataDirectory, filename)
+  const fileContents = fs.readFileSync(filePath, 'utf8')
+  const portfolio = JSON.parse(fileContents)
 
-//     return {
-//       filename,
-//       data: JSON.parse(fileContents),
-//     }
-//   })
-//   //Shuffle array of companies
-//   shuffle(companies);
+  //Load specific case markdown file
+  const aboutFile = path.join(process.cwd(), `/data/md/about.md`)
+  const aboutFileContents = fs.readFileSync(aboutFile, 'utf8')
+  const { data, content } = matter(aboutFileContents)
 
-//   return {
-//     props: {
-//       companies
-//     },
-//   }
-// }
+  return {
+    props: {
+      portfolio,
+      mdData: data,
+      mdContent: content
+    }
+  }
+}

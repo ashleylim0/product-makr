@@ -1,11 +1,18 @@
 import Page from '../components/page';
 import Meta from '../components/Meta';
+import { Portfolio } from '../types/portfolio.types';
+import fs from 'fs';
+import path from 'path';
+import { GetStaticProps } from 'next';
 
-export default function Custom404() {
+export default function Custom404({ portfolio }: {
+    portfolio: Portfolio
+}) {
+
     return (
         <>
             <Meta title='404 | Page Not Found' />
-            <Page>
+            <Page portfolio={portfolio}>
                 <div style={{ minHeight: '70vh' }}>
                     <h1 style={{
                         margin: '0',
@@ -19,4 +26,19 @@ export default function Custom404() {
             </Page>
         </>
     )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+    const dataDirectory = path.join(process.cwd(), '/data')
+    const filename = 'me.json'
+
+    const filePath = path.join(dataDirectory, filename)
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    const portfolio = JSON.parse(fileContents)
+
+    return {
+        props: {
+            portfolio
+        }
+    }
 }

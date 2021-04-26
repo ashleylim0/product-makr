@@ -14,15 +14,15 @@ import { GetStaticProps } from 'next';
 
 export default function Home({ portfolio }: { portfolio: Portfolio }) {
 
-  // TODO update canonical link with imported url
   return (
     <div>
       <Meta
-        title={portfolio.name}
+        siteName={`${portfolio.name} | Product Manager Portfolio`}
+        title={`${portfolio.name} | ${portfolio.title}`}
         desc={portfolio.summary}
-        canonical="" />
+        canonical={`${process.env.PUBLIC_URL}`} />
 
-      <Page>
+      <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '3em 0' }}>
           <Grid
             container

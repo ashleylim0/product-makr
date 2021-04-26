@@ -28,7 +28,7 @@
   ],
   "projects": [
     {
-      "slug": "project-slug-NO-SPACES",
+      "slug": "project-slug",
       "title": "Awesome Example App",
       "summary": "This is a quick summary of Awesome Example App",
       "role": "Product Manager, Designer, Developer etc",
@@ -55,7 +55,7 @@
   ],
   "cases": [
     {
-      "slug": "case-slug-NO-SPACES",
+      "slug": "case-slug",
       "title": "Awesome Example App",
       "summary": "This is a quick summary of Awesome Example App",
       "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
@@ -68,7 +68,7 @@
     }
   ],
   "theme": {
-    "accentColor": "",
+    "accentColor": "red | blue | green | purple",
     "emoji": "🔭",
     "quote": "\"Be yourself; everyone else is already taken.\" - Oscar Wilde"
   }

@@ -1,27 +1,33 @@
-import { useState, useEffect } from 'react';
 import {
-  Button,
   Grid,
-  Header,
   Container
 } from 'semantic-ui-react';
 import fs from 'fs';
 import path from 'path';
 import Page from '../../components/page';
 import Meta from '../../components/Meta';
-import { shuffle } from '../../util/helpers';
-import { GetStaticProps } from 'next';
+import { Portfolio } from '../../types/portfolio.types';
+import { GetStaticProps, GetStaticPaths } from 'next';
+import { Case } from '../../types/case.types';
+import matter from 'gray-matter';
+import ReactMarkdown from 'react-markdown';
 
-export default function Case({ companies }: { companies: any[] }) {
+export default function MyCase({ portfolio, myCase, mdData, mdContent }: {
+  portfolio: Portfolio,
+  myCase: Case,
+  mdData: any,
+  mdContent: any
+}) {
 
+  //TODO revisit, load markdown files properly & get data for initial props
   return (
     <div>
       <Meta
-        title='Case Studies'
-        desc='Open-source project to help Product Managers make portfolio pages and improve their job hunt.'
-        canonical='https://product.makr.io/' />
+        title={`${myCase.title} | ${portfolio.name}`}
+        desc={`${myCase.summary}`}
+        canonical={`${process.env.PUBLIC_URL}/cases/${myCase.slug}`} />
 
-      <Page>
+      <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '3em 0' }}>
           <Grid
             container
@@ -30,7 +36,8 @@ export default function Case({ companies }: { companies: any[] }) {
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '0.5em' }}>
               <Grid.Column>
-
+                <p>{myCase.title}</p>
+                <ReactMarkdown children={mdContent} />
               </Grid.Column>
             </Grid.Row>
           </Grid>
@@ -40,25 +47,44 @@ export default function Case({ companies }: { companies: any[] }) {
   )
 }
 
-// export const getStaticProps: GetStaticProps = async () => {
-//   const companiesDirectory = path.join(process.cwd(), '/public/data/companies')
-//   const filenames = fs.readdirSync(companiesDirectory)
+export const getStaticPaths: GetStaticPaths = async () => {
+  const casesDirectory = path.join(process.cwd(), '/data/md/cases')
+  const filenames = fs.readdirSync(casesDirectory)
 
-//   const companies = filenames.map((filename) => {
-//     const filePath = path.join(companiesDirectory, filename)
-//     const fileContents = fs.readFileSync(filePath, 'utf8')
+  const paths = filenames.map((filename) => {
+    const slug = filename.replace(/\.md$/, '')
+    return {
+      params: {
+        case: slug
+      }
+    }
+  })
+  return { paths, fallback: false }
+}
 
-//     return {
-//       filename,
-//       data: JSON.parse(fileContents),
-//     }
-//   })
-//   //Shuffle array of companies
-//   shuffle(companies);
+export const getStaticProps: GetStaticProps = async context => {
+  const caseName = context.params.case
+  const dataDirectory = path.join(process.cwd(), '/data')
+  const filename = 'me.json'
 
-//   return {
-//     props: {
-//       companies
-//     },
-//   }
-// }
+  const filePath = path.join(dataDirectory, filename)
+  const fileContents = fs.readFileSync(filePath, 'utf8')
+  const portfolio = JSON.parse(fileContents)
+
+  //Load specific case from me.json
+  const myCase = portfolio.cases.find((currentCase: Case) => currentCase.slug == caseName)
+
+  //Load specific case markdown file
+  const caseFile = path.join(process.cwd(), `/data/md/cases/${caseName}.md`)
+  const caseFileContents = fs.readFileSync(caseFile, 'utf8')
+  const { data, content } = matter(caseFileContents)
+
+  return {
+    props: {
+      portfolio,
+      myCase,
+      mdData: data,
+      mdContent: content
+    }
+  }
+}

@@ -8,4 +8,5 @@ export interface SEOProps {
     icon?: string;
     twitter?: string;
     color?: string;
+    siteName?: string;
 }
