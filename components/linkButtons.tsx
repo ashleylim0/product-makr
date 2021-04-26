@@ -3,7 +3,6 @@ import { withHttp } from '../util/helpers';
 
 export default function LinkButtons({ profiles }: { profiles: any }) {
 
-  console.log(profiles)
   return (profiles ?
     <List horizontal size='large'>
       {profiles.map((profile: any) =>
