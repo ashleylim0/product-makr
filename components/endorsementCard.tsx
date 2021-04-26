@@ -7,7 +7,7 @@ export default function EndorsementCard({ endorsement }: {
 
   return (
     <Card fluid key={endorsement.name}>
-      {endorsement.text ? <Card.Content textAlign='right'>
+      {endorsement.text ? <Card.Content textAlign='left'>
         <p style={{ fontSize: '1.2em' }} className='tagline'>
           {endorsement.text}
         </p>
