@@ -34,7 +34,7 @@ export default function Page({ children, portfolio }: {
           <Menu.Item as='a'>
             <Link href='/about'>
               <div style={{ padding: '0.5em' }} className='sidebar-text'>
-                <Icon name='lightbulb outline' />About</div>
+                <Icon name='lightbulb outline' />About Me</div>
             </Link>
           </Menu.Item>
           {portfolio.blog ?
@@ -94,7 +94,7 @@ export default function Page({ children, portfolio }: {
             : null}
         </Sidebar>
       </main>
-      <Footer />
+      <Footer portfolio={portfolio} />
     </>
   )
 }
