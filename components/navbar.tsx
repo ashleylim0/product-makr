@@ -44,9 +44,9 @@ export default function Navbar({ openDrawer, portfolio }: {
           </Header>
           <List horizontal style={{ width: '100vw' }}>
             <List.Item>
-              <a
-                href="/about"
-                className='nav-button-text'>About</a>
+              <Link href='/about'>
+                <a className='nav-button-text'>About</a>
+              </Link>
             </List.Item>
             {portfolio.blog ? <List.Item>
               <a
