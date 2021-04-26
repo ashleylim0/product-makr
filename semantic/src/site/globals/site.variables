@@ -13,8 +13,9 @@
 @purple: #340C61;
 @lightPurple: #340C61;
 @olive: #98ee98;
-@linkColor: #009FDA;
-@linkHoverColor: darken(saturate(@linkColor, 20), 15, relative);
+@linkColor: #555B66;
+@linkHoverColor: #0C5FFF;
+@highlightBackground: #7AFFE1;
 
 
 @fontName          : 'Open Sans';

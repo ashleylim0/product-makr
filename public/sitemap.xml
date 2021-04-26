@@ -2,27 +2,27 @@
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
           
                       <url>
-                          <loc>https://pm.rede.io/about</loc>
+                          <loc>https://rene.makr.io/about</loc>
                       </url>
                   
                       <url>
-                          <loc>https://pm.rede.io</loc>
+                          <loc>https://rene.makr.io</loc>
                       </url>
                   
                       <url>
-                          <loc>https://pm.rede.io/projects</loc>
+                          <loc>https://rene.makr.io/cases</loc>
                       </url>
                   
                       <url>
-                          <loc>https://pm.rede.io/cases</loc>
+                          <loc>https://rene.makr.io/projects</loc>
                       </url>
                   
                       <url>
-                          <loc>https://pm.rede.io/cases/case-slug</loc>
+                          <loc>https://rene.makr.io/cases/case-slug</loc>
                       </url>
                   
                       <url>
-                          <loc>https://pm.rede.io/projects/project-slug</loc>
+                          <loc>https://rene.makr.io/projects/project-slug</loc>
                       </url>
                   
       </urlset>

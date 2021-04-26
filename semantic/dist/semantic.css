@@ -545,12 +545,12 @@ p:last-child {
 --------------------*/
 
 a {
-  color: #009FDA;
+  color: #555B66;
   text-decoration: none;
 }
 
 a:hover {
-  color: #0087b9;
+  color: #0C5FFF;
   text-decoration: none;
 }
 
@@ -565,17 +565,17 @@ a:hover {
 /* Site */
 
 ::-webkit-selection {
-  background-color: #CCE2FF;
+  background-color: #7AFFE1;
   color: rgba(0, 0, 0, 0.87);
 }
 
 ::-moz-selection {
-  background-color: #CCE2FF;
+  background-color: #7AFFE1;
   color: rgba(0, 0, 0, 0.87);
 }
 
 ::selection {
-  background-color: #CCE2FF;
+  background-color: #7AFFE1;
   color: rgba(0, 0, 0, 0.87);
 }
 
@@ -19102,7 +19102,7 @@ a.ui.active.label:hover:before {
 a.ui.basic.label:hover {
   text-decoration: none;
   background: none #FFFFFF;
-  color: #0087b9;
+  color: #0C5FFF;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -19152,7 +19152,7 @@ a.ui.basic.label:hover {
 }
 
 .ui.inverted.basic.label:hover {
-  color: #009FDA;
+  color: #555B66;
 }
 
 /*-------------------
@@ -21042,12 +21042,12 @@ ol.ui.list ol li,
 .ui.list .list > a.item,
 .ui.list > a.item {
   cursor: pointer;
-  color: #009FDA;
+  color: #555B66;
 }
 
 .ui.list .list > a.item:hover,
 .ui.list > a.item:hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /* Linked Item Icons */
@@ -21064,12 +21064,12 @@ ol.ui.list ol li,
 .ui.list .list > .item a.header,
 .ui.list > .item a.header {
   cursor: pointer;
-  color: #009FDA !important;
+  color: #555B66 !important;
 }
 
 .ui.list .list > .item > a.header:hover,
 .ui.list > .item > a.header:hover {
-  color: #0087b9 !important;
+  color: #0C5FFF !important;
 }
 
 /* Floated Content */
@@ -21259,7 +21259,7 @@ ol.ui.list ol li,
 
 .ui.inverted.list .list > a.item:hover,
 .ui.inverted.list > a.item:hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /* Linking Content */
@@ -21269,7 +21269,7 @@ ol.ui.list ol li,
 }
 
 .ui.inverted.list .item a:not(.ui):hover {
-  color: #0087b9 !important;
+  color: #0C5FFF !important;
 }
 
 /*-------------------
@@ -24747,7 +24747,7 @@ ol.ui.suffixed.list li:before,
 }
 
 .ui.steps .step.active .title {
-  color: #009FDA;
+  color: #555B66;
 }
 
 .ui.ordered.steps .step.active:before,
@@ -25164,11 +25164,11 @@ ol.ui.suffixed.list li:before,
 /* Link */
 
 .ui.breadcrumb a {
-  color: #009FDA;
+  color: #555B66;
 }
 
 .ui.breadcrumb a:hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /* Icon Divider */
@@ -36060,7 +36060,7 @@ Floated Menu / Item
 
 .ui.cards > .card > .content > a.header:hover,
 .ui.card > .content > a.header:hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /* Meta */
@@ -36187,7 +36187,7 @@ Floated Menu / Item
 
 .ui.cards > .card > .extra a:not(.ui):hover,
 .ui.card > .extra a:not(.ui):hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /*******************************
@@ -37191,7 +37191,7 @@ a.ui.card:hover,
 
 .ui.inverted.cards > .card > .extra a:not(.ui):hover,
 .ui.inverted.card > .extra a:not(.ui):hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /* Link card(s) */
@@ -37331,7 +37331,7 @@ a.inverted.ui.card:hover,
 }
 
 .ui.comments .comment a.author:hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /*--------------
@@ -38142,7 +38142,7 @@ a.inverted.ui.card:hover,
 }
 
 .ui.items > .item > .content > a.header:hover {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /* Meta */
@@ -38373,7 +38373,7 @@ a.inverted.ui.card:hover,
 
 .ui.items a.item:hover .content .header,
 .ui.link.items > .item:hover .content .header {
-  color: #0087b9;
+  color: #0C5FFF;
 }
 
 /*--------------
@@ -38453,11 +38453,11 @@ a.inverted.ui.card:hover,
 }
 
 .ui.inverted.items > .item > .content a:not(.ui) {
-  color: #12bfff;
+  color: #4767a3;
 }
 
 .ui.inverted.items > .item > .content a:not(.ui):hover {
-  color: #009FDA;
+  color: #555B66;
 }
 
 .ui.inverted.items > .item > .content > a.header {

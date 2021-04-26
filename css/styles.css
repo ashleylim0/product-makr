@@ -1,3 +1,13 @@
+::selection {
+    background: #7AFFE1;
+    /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+    background: #7AFFE1;
+    /* Gecko Browsers */
+}
+
 .card-link {
     color: #555B66;
 }
