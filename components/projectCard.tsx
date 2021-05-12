@@ -7,7 +7,8 @@ export default function ProjectCard({ project }: {
 
   return (
     <Card
-      as='a'
+      as="a"
+      target="_blank"
       href={project.links[0] ? project.links[0].url : null}
       key={project.slug}
       fluid

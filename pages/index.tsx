@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import {
-  Button,
   Grid,
   Header,
   Container
 } from 'semantic-ui-react';
+import ReactMarkdown from 'react-markdown';
 import fs from 'fs';
 import path from 'path';
 import Page from '../components/page';
@@ -28,7 +28,7 @@ export default function Home({ portfolio }: { portfolio: Portfolio }) {
       <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '3em 0' }}>
           <Grid
-            style={{ padding: '1em 2em 3em', }}
+            style={{ padding: '1.5em 1em 1.5em', }}
             centered
             stackable
             textAlign='center'
@@ -41,20 +41,17 @@ export default function Home({ portfolio }: { portfolio: Portfolio }) {
                 <h1 style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                   {portfolio.title}
                 </h1>
-                <p style={{ fontSize: '2.2em' }}>
-                  {portfolio.summary}
-                </p>
+                <div style={{ fontSize: '2.2em' }} >
+                  <ReactMarkdown children={portfolio.summary} linkTarget="_blank" />
+                </div>
               </Grid.Column>
             </Grid.Row>
             {portfolio.projects && portfolio.projects.length > 0 ?
-              <Grid.Row style={{ padding: '0.5em 0.5em 2em' }}>
+              <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ fontSize: '2.7em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Projects
               </Header>
-                  <p style={{ fontSize: '2em' }}>
-                    {/* PROJECTS */}
-                  </p>
                   {portfolio.projects.map((project: any) =>
                     <ProjectCard key={project.slug} project={project} />)}
                 </Grid.Column>
@@ -62,22 +59,19 @@ export default function Home({ portfolio }: { portfolio: Portfolio }) {
             }
 
             {portfolio.cases && portfolio.cases.length > 0 ?
-              <Grid.Row style={{ padding: '0.5em 0.5em 2em' }}>
+              <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ fontSize: '2.7em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Blog &amp; Case Highlights
                 </Header>
-                  <p style={{ fontSize: '2em' }}>
-                    {/* CASES */}
-                  </p>
                   {portfolio.cases.map((myCase: any) =>
                     <CaseCard key={myCase.slug} myCase={myCase} />)}
                 </Grid.Column>
               </Grid.Row> : null
             }
-            <Grid.Row style={{ padding: '0.5em 0.5em 2em' }}>
+            <Grid.Row style={{ padding: '1em 0 2em' }}>
               <Grid.Column width='9'>
-                <Header style={{ fontSize: '2.7em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                   Endorsements
                 </Header>
                 {portfolio.endorsements.map((endorsement: any) =>
