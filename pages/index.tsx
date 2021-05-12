@@ -13,7 +13,7 @@ import { Portfolio } from '../types/portfolio.types';
 import { GetStaticProps } from 'next';
 import ProjectCard from '../components/projectCard';
 import CaseCard from '../components/caseCard';
-import EndorsementCard from '../components/endorsementCard';
+import EndorsementItem from '../components/endorsementItem';
 
 export default function Home({ portfolio }: { portfolio: Portfolio }) {
 
@@ -80,11 +80,8 @@ export default function Home({ portfolio }: { portfolio: Portfolio }) {
                 <Header style={{ fontSize: '2.7em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                   Endorsements
                 </Header>
-                <p style={{ fontSize: '2em' }}>
-                  {/* Endorsements */}
-                </p>
                 {portfolio.endorsements.map((endorsement: any) =>
-                  <EndorsementCard key={endorsement.name} endorsement={endorsement} />)}
+                  <EndorsementItem key={endorsement.name} endorsement={endorsement} />)}
               </Grid.Column>
             </Grid.Row>
           </Grid>
