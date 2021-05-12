@@ -2,7 +2,7 @@
   "name": "René DeAnda",
   "email": "rene@deanda.org",
   "title": "Product Manager",
-  "summary": "I'm a jack of all trades, master of none. I love to learn new things by reading, asking lots of questions, and building new things that help others. Welcome!",
+  "summary": "I'm a jack of all trades, master of none. I love to learn new things by [reading](https://goodreads.com/renedeanda), asking lots of questions, and building new things that help others. I also love [photography](https://unsplash.com/@renedeanda). Welcome!",
   "blog": "https://rede.io",
   "podcast": "https://soundcloud.com/delightfultoday",
   "resume": "https://rene.makr.io/resume.pdf",
@@ -65,11 +65,77 @@
           "text": "This app is awesome..."
         }
       ]
+    },
+    {
+      "slug": "project-slug2",
+      "title": "Relish Mobile App",
+      "summary": "This is a quick summary of Awesome Example App",
+      "role": "Product Manager, Designer, Developer etc",
+      "status": "Dead",
+      "links": [],
+      "testimonials": [
+        {
+          "name": "Jane Smith",
+          "text": "This app is awesome..."
+        }
+      ]
+    },
+    {
+      "slug": "project-slug3",
+      "title": "AdNotes Mobile App",
+      "summary": "This is a quick summary of Awesome Example App",
+      "role": "Product Manager, Designer, Developer etc",
+      "status": "Dead",
+      "links": [],
+      "testimonials": [
+        {
+          "name": "Jane Smith",
+          "text": "This app is awesome..."
+        }
+      ]
+    },
+    {
+      "slug": "project-slug4",
+      "title": "Vina.Dev",
+      "summary": "This is a quick summary of Awesome Example App",
+      "role": "Product Manager, Designer, Developer etc",
+      "status": "Dead",
+      "links": [],
+      "testimonials": [
+        {
+          "name": "Jane Smith",
+          "text": "This app is awesome..."
+        }
+      ]
     }
   ],
   "cases": [
     {
       "slug": "case-slug",
+      "title": "Awesome Case Study OR Blog Post Title",
+      "summary": "This is a quick summary of Awesome Case Study",
+      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+    },
+    {
+      "slug": "case-slug1",
+      "title": "Awesome Case Study OR Blog Post Title",
+      "summary": "This is a quick summary of Awesome Case Study",
+      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+    },
+    {
+      "slug": "case-slug2",
+      "title": "Awesome Case Study OR Blog Post Title",
+      "summary": "This is a quick summary of Awesome Case Study",
+      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+    },
+    {
+      "slug": "case-slug3",
+      "title": "Awesome Case Study OR Blog Post Title",
+      "summary": "This is a quick summary of Awesome Case Study",
+      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+    },
+    {
+      "slug": "case-slug4",
       "title": "Awesome Case Study OR Blog Post Title",
       "summary": "This is a quick summary of Awesome Case Study",
       "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
