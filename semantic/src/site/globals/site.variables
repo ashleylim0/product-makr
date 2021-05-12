@@ -7,7 +7,7 @@
 
 /*---  Colors  ---*/
 
-@pageBackground: #F9FAFD;
+@pageBackground: #FFFFFF;
 @primaryColor: #88FFD4;
 @secondaryColor: #0C5FFF;
 @purple: #340C61;

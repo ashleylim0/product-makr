@@ -4,11 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run semantic:build && next build",
     "start": "next start",
     "now-dev": "npm run semantic:build && next dev",
     "export": "next export",
-    "now-build": "npm run semantic:build && next build",
     "semantic:build": "cd semantic && gulp build-css build-assets",
     "semantic:watch": "cd semantic && npm run semantic:build && gulp watch",
     "lint": "eslint .",
@@ -17,7 +16,7 @@
   "dependencies": {
     "fomantic-ui": "^2.8.7",
     "gray-matter": "^4.0.3",
-    "next": "10.1.3",
+    "next": "10.2.0",
     "raw-loader": "^4.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -26,7 +25,7 @@
   },
   "devDependencies": {
     "@types/gtag.js": "0.0.4",
-    "@types/node": "^14.14.41",
+    "@types/node": "^15.0.1",
     "@types/react": "^17.0.4",
     "globby": "^11.0.3",
     "typescript": "^4.2.4"
