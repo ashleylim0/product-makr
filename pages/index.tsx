@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import {
+  Button,
   Grid,
   Header,
   Container
@@ -49,11 +50,14 @@ export default function Home({ portfolio }: { portfolio: Portfolio }) {
             {portfolio.projects && portfolio.projects.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Projects
               </Header>
-                  {portfolio.projects.map((project: any) =>
+                  {portfolio.projects.slice(0, 3).map((project: any) =>
                     <ProjectCard key={project.slug} project={project} />)}
+                  {portfolio.cases.length > 3 ?
+                    <Button basic fluid>View All Projects</Button>
+                    : null}
                 </Grid.Column>
               </Grid.Row> : null
             }
@@ -61,17 +65,21 @@ export default function Home({ portfolio }: { portfolio: Portfolio }) {
             {portfolio.cases && portfolio.cases.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Blog &amp; Case Highlights
                 </Header>
-                  {portfolio.cases.map((myCase: any) =>
-                    <CaseCard key={myCase.slug} myCase={myCase} />)}
+                  {portfolio.cases.slice(0, 3).map((myCase: any, index: number) =>
+                    <CaseCard key={myCase.slug} myCase={myCase} />
+                  )}
+                  {portfolio.cases.length > 3 ?
+                    <Button basic fluid>View All Highlights</Button>
+                    : null}
                 </Grid.Column>
               </Grid.Row> : null
             }
             <Grid.Row style={{ padding: '1em 0 2em' }}>
               <Grid.Column width='9'>
-                <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                   Endorsements
                 </Header>
                 {portfolio.endorsements.map((endorsement: any) =>
