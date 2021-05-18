@@ -101,12 +101,7 @@
       "role": "Product Manager, Designer, Developer etc",
       "status": "Dead",
       "links": [],
-      "testimonials": [
-        {
-          "name": "Jane Smith",
-          "text": "This app is awesome..."
-        }
-      ]
+      "testimonials": []
     }
   ],
   "cases": [
