@@ -104,33 +104,33 @@
       "testimonials": []
     }
   ],
-  "cases": [
+  "highlights": [
     {
-      "slug": "case-slug",
+      "slug": "highlight-slug",
       "title": "Awesome Case Study OR Blog Post Title",
       "summary": "This is a quick summary of Awesome Case Study",
       "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
     },
     {
-      "slug": "case-slug1",
+      "slug": "highlight-slug1",
       "title": "Awesome Case Study OR Blog Post Title",
       "summary": "This is a quick summary of Awesome Case Study",
       "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
     },
     {
-      "slug": "case-slug2",
+      "slug": "highlight-slug2",
       "title": "Awesome Case Study OR Blog Post Title",
       "summary": "This is a quick summary of Awesome Case Study",
       "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
     },
     {
-      "slug": "case-slug3",
+      "slug": "highlight-slug3",
       "title": "Awesome Case Study OR Blog Post Title",
       "summary": "This is a quick summary of Awesome Case Study",
       "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
     },
     {
-      "slug": "case-slug4",
+      "slug": "highlight-slug4",
       "title": "Awesome Case Study OR Blog Post Title",
       "summary": "This is a quick summary of Awesome Case Study",
       "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"

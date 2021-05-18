@@ -28,7 +28,7 @@ export interface Portfolio {
             text: string
         }]
     }],
-    cases: [{
+    highlights: [{
         slug: string,
         title: string,
         summary: string,

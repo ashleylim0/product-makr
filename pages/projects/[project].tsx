@@ -73,10 +73,10 @@ export const getStaticProps: GetStaticProps = async context => {
   const fileContents = fs.readFileSync(filePath, 'utf8')
   const portfolio = JSON.parse(fileContents)
 
-  //Load specific case from me.json
+  //Load specific project from me.json
   const myProject = portfolio.projects.find((currentProject: Project) => currentProject.slug == projectName)
 
-  //Load specific case markdown file
+  //Load specific project markdown file
   const projectFile = path.join(process.cwd(), `/data/md/projects/${projectName}.md`)
   const projectFileContents = fs.readFileSync(projectFile, 'utf8')
   const { data, content } = matter(projectFileContents)

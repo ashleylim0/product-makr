@@ -18,23 +18,11 @@ export default function Projects({ portfolio }: { portfolio: Portfolio }) {
     <div>
       <Meta
         title={`Projects | ${portfolio.name}`}
-        desc={portfolio.summary}
+        desc={`${portfolio.name}'s Product Projects`}
         canonical={`${process.env.PUBLIC_URL}/projects`} />
 
       <Page portfolio={portfolio}>
-        <Container style={{ width: '100vw', margin: '3em 0' }}>
-          <Grid
-            container
-            stackable
-            textAlign='center'
-            verticalAlign='middle'>
-            <Grid.Row style={{ padding: '0.5em' }}>
-              <Grid.Column>
-
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
+        {/* <Projects /> */}
       </Page>
     </div >
   )

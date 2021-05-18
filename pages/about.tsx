@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const fileContents = fs.readFileSync(filePath, 'utf8')
   const portfolio = JSON.parse(fileContents)
 
-  //Load specific case markdown file
+  //Load about markdown file
   const aboutFile = path.join(process.cwd(), `/data/md/about.md`)
   const aboutFileContents = fs.readFileSync(aboutFile, 'utf8')
   const { data, content } = matter(aboutFileContents)

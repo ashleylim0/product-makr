@@ -1,4 +1,4 @@
-export interface Case {
+export interface Highlight {
     slug: string,
     title: string,
     summary: string,

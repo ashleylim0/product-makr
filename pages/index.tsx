@@ -15,12 +15,11 @@ import Meta from '../components/Meta';
 import { Portfolio } from '../types/portfolio.types';
 import { GetStaticProps } from 'next';
 import ProjectCard from '../components/projectCard';
-import CaseCard from '../components/caseCard';
+import HighlightCard from '../components/highlightCard';
 import EndorsementItem from '../components/endorsementItem';
 
 export default function Home({ portfolio, summary }: { portfolio: Portfolio, summary: string }) {
 
-  console.log(summary)
   return (
     <div>
       <Meta
@@ -58,23 +57,23 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
               </Header>
                   {portfolio.projects.slice(0, 3).map((project: any) =>
                     <ProjectCard key={project.slug} project={project} />)}
-                  {portfolio.cases.length > 3 ?
+                  {portfolio.highlights.length > 3 ?
                     <Button color='black' style={{ marginTop: '24px' }} fluid>View All Projects</Button>
                     : null}
                 </Grid.Column>
               </Grid.Row> : null
             }
 
-            {portfolio.cases && portfolio.cases.length > 0 ?
+            {portfolio.highlights && portfolio.highlights.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
                   <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Blog &amp; Case Highlights
                 </Header>
-                  {portfolio.cases.slice(0, 3).map((myCase: any, index: number) =>
-                    <CaseCard key={myCase.slug} myCase={myCase} />
+                  {portfolio.highlights.slice(0, 3).map((myHighlight: any, index: number) =>
+                    <HighlightCard key={myHighlight.slug} myHighlight={myHighlight} />
                   )}
-                  {portfolio.cases.length > 3 ?
+                  {portfolio.highlights.length > 3 ?
                     <Button color='black' style={{ marginTop: '24px' }} fluid>View All Highlights</Button>
                     : null}
                 </Grid.Column>
