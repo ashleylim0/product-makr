@@ -1,5 +1,5 @@
 import { Card } from 'semantic-ui-react';
-import { Case } from '../types/case.types';
+import { Case } from '../types/highlight.types';
 
 export default function CaseCard({ myCase }: {
   myCase: Case,

@@ -8,9 +8,9 @@ async function generateSiteMap() {
     '!pages/404.tsx',
     '!pages/500.tsx',
     '!pages/**/[project].tsx',
-    '!pages/**/[case].tsx',
+    '!pages/**/[highlight].tsx',
     '!pages/api',
-    'data/md/cases/*.md',
+    'data/md/highlights/*.md',
     'data/md/projects/*.md'
   ])
 
@@ -26,11 +26,11 @@ async function generateSiteMap() {
           .replace('.jsx', '')
           .replace('.js', '')
           .replace('.md', '')
-          .replace('data/md/cases', '/cases')
+          .replace('data/md/highlights', '/highlights')
           .replace('data/md/projects', '/projects')
           .replace('data/md', '')
           .replace('projects/index', 'projects')
-          .replace('cases/index', 'cases')
+          .replace('highlights/index', 'highlights')
 
         const route = path === '/index' ? '' : path
 

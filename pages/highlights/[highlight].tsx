@@ -8,13 +8,13 @@ import Page from '../../components/page';
 import Meta from '../../components/Meta';
 import { Portfolio } from '../../types/portfolio.types';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import { Case } from '../../types/case.types';
+import { Highlight } from '../../types/highlight.types';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 
-export default function MyCase({ portfolio, myCase, mdData, mdContent }: {
+export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent }: {
   portfolio: Portfolio,
-  myCase: Case,
+  myHighlight: Highlight,
   mdData: any,
   mdContent: any
 }) {
@@ -23,9 +23,9 @@ export default function MyCase({ portfolio, myCase, mdData, mdContent }: {
   return (
     <div>
       <Meta
-        title={`${myCase.title} | ${portfolio.name}`}
-        desc={`${myCase.summary}`}
-        canonical={`${process.env.PUBLIC_URL}/cases/${myCase.slug}`} />
+        title={`${myHighlight.title} | ${portfolio.name}`}
+        desc={`${myHighlight.summary}`}
+        canonical={`${process.env.PUBLIC_URL}/highlights/${myHighlight.slug}`} />
 
       <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '3em 0' }}>
@@ -36,7 +36,7 @@ export default function MyCase({ portfolio, myCase, mdData, mdContent }: {
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '0.5em' }}>
               <Grid.Column>
-                <p>{myCase.title}</p>
+                <p>{myHighlight.title}</p>
                 <ReactMarkdown children={mdContent} />
               </Grid.Column>
             </Grid.Row>
@@ -48,14 +48,14 @@ export default function MyCase({ portfolio, myCase, mdData, mdContent }: {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const casesDirectory = path.join(process.cwd(), '/data/md/cases')
-  const filenames = fs.readdirSync(casesDirectory)
+  const highlightsDirectory = path.join(process.cwd(), '/data/md/highlights')
+  const filenames = fs.readdirSync(highlightsDirectory)
 
   const paths = filenames.map((filename) => {
     const slug = filename.replace(/\.md$/, '')
     return {
       params: {
-        case: slug
+        highlight: slug
       }
     }
   })
@@ -63,7 +63,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async context => {
-  const caseName = context.params.case
+  const highlightName = context.params.highlight
   const dataDirectory = path.join(process.cwd(), '/data')
   const filename = 'me.json'
 
@@ -71,18 +71,18 @@ export const getStaticProps: GetStaticProps = async context => {
   const fileContents = fs.readFileSync(filePath, 'utf8')
   const portfolio = JSON.parse(fileContents)
 
-  //Load specific case from me.json
-  const myCase = portfolio.cases.find((currentCase: Case) => currentCase.slug == caseName)
+  //Load specific highlight from me.json
+  const myHighlight = portfolio.highlights.find((currentHighlight: Highlight) => currentHighlight.slug == highlightName)
 
-  //Load specific case markdown file
-  const caseFile = path.join(process.cwd(), `/data/md/cases/${caseName}.md`)
-  const caseFileContents = fs.readFileSync(caseFile, 'utf8')
-  const { data, content } = matter(caseFileContents)
+  //Load specific highlight markdown file
+  const highlightFile = path.join(process.cwd(), `/data/md/highlights/${highlightName}.md`)
+  const highlightFileContents = fs.readFileSync(highlightFile, 'utf8')
+  const { data, content } = matter(highlightFileContents)
 
   return {
     props: {
       portfolio,
-      myCase,
+      myHighlight,
       mdData: data,
       mdContent: content
     }

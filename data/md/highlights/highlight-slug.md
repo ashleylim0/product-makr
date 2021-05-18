@@ -4,9 +4,9 @@ author:
   name: 'Jane Smith'
   picture: '/img/about/me.jpeg'
 date: '2021-01-01'
-coverImage: '/img/cases/case-slug/cover.jpg'
+coverImage: '/img/highlights/highlight-slug/cover.jpg'
 ogImage:
-  url: '/img/cases/case-slug/cover.jpg'
+  url: '/img/highlights/highlight-slug/cover.jpg'
 ---
 
 I **love** case studies.
