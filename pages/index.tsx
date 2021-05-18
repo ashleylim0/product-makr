@@ -6,6 +6,8 @@ import {
   Container
 } from 'semantic-ui-react';
 import ReactMarkdown from 'react-markdown';
+import remark from 'remark';
+import strip from 'strip-markdown';
 import fs from 'fs';
 import path from 'path';
 import Page from '../components/page';
@@ -16,14 +18,15 @@ import ProjectCard from '../components/projectCard';
 import CaseCard from '../components/caseCard';
 import EndorsementItem from '../components/endorsementItem';
 
-export default function Home({ portfolio }: { portfolio: Portfolio }) {
+export default function Home({ portfolio, summary }: { portfolio: Portfolio, summary: string }) {
 
+  console.log(summary)
   return (
     <div>
       <Meta
         siteName={`${portfolio.name} | Product Manager Portfolio`}
         title={`${portfolio.name} | ${portfolio.title}`}
-        desc={portfolio.summary}
+        desc={summary}
         canonical={`${process.env.PUBLIC_URL}`} />
 
       <Page portfolio={portfolio}>
@@ -56,7 +59,7 @@ export default function Home({ portfolio }: { portfolio: Portfolio }) {
                   {portfolio.projects.slice(0, 3).map((project: any) =>
                     <ProjectCard key={project.slug} project={project} />)}
                   {portfolio.cases.length > 3 ?
-                    <Button basic fluid>View All Projects</Button>
+                    <Button color='black' style={{ marginTop: '24px' }} fluid>View All Projects</Button>
                     : null}
                 </Grid.Column>
               </Grid.Row> : null
@@ -72,7 +75,7 @@ export default function Home({ portfolio }: { portfolio: Portfolio }) {
                     <CaseCard key={myCase.slug} myCase={myCase} />
                   )}
                   {portfolio.cases.length > 3 ?
-                    <Button basic fluid>View All Highlights</Button>
+                    <Button color='black' style={{ marginTop: '24px' }} fluid>View All Highlights</Button>
                     : null}
                 </Grid.Column>
               </Grid.Row> : null
@@ -101,9 +104,18 @@ export const getStaticProps: GetStaticProps = async () => {
   const fileContents = fs.readFileSync(filePath, 'utf8')
   const portfolio = JSON.parse(fileContents)
 
+  // Creates markdown free summary for SEO description
+  let summary: string;
+  remark().use(strip).process(portfolio.summary, function (err, file) {
+    if (err) throw err
+    summary = String(file)
+  })
+
+
   return {
     props: {
-      portfolio
+      portfolio,
+      summary
     }
   }
 }
