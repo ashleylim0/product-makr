@@ -15,7 +15,7 @@ import Meta from '../components/Meta';
 import { Portfolio } from '../types/portfolio.types';
 import { GetStaticProps } from 'next';
 import ProjectCard from '../components/projectCard';
-import CaseCard from '../components/highlightCard';
+import HighlightCard from '../components/highlightCard';
 import EndorsementItem from '../components/endorsementItem';
 
 export default function Home({ portfolio, summary }: { portfolio: Portfolio, summary: string }) {
@@ -70,8 +70,8 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                   <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Blog &amp; Case Highlights
                 </Header>
-                  {portfolio.highlights.slice(0, 3).map((myCase: any, index: number) =>
-                    <CaseCard key={myCase.slug} myCase={myCase} />
+                  {portfolio.highlights.slice(0, 3).map((myHighlight: any, index: number) =>
+                    <HighlightCard key={myHighlight.slug} myHighlight={myHighlight} />
                   )}
                   {portfolio.highlights.length > 3 ?
                     <Button color='black' style={{ marginTop: '24px' }} fluid>View All Highlights</Button>
