@@ -49,10 +49,10 @@ export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent 
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const highlightsDirectory = path.join(process.cwd(), '/data/md/highlights');
-  const filenames = fs.readdirSync(highlightsDirectory);
   let paths = null;
 
-  if (filenames.length > 0) {
+  if (fs.existsSync(highlightsDirectory)) {
+    const filenames = fs.readdirSync(highlightsDirectory);
     paths = filenames.map((filename) => {
       const slug = filename.replace(/\.md$/, '')
       return {
@@ -62,6 +62,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       }
     });
   }
+
   return { paths, fallback: false }
 }
 
