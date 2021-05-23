@@ -48,39 +48,42 @@ export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent 
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const highlightsDirectory = path.join(process.cwd(), '/data/md/highlights')
-  const filenames = fs.readdirSync(highlightsDirectory)
+  const highlightsDirectory = path.join(process.cwd(), '/data/md/highlights');
+  const filenames = fs.readdirSync(highlightsDirectory);
+  let paths = null;
 
-  const paths = filenames.map((filename) => {
-    const slug = filename.replace(/\.md$/, '')
-    return {
-      params: {
-        highlight: slug
+  if (filenames.length > 0) {
+    paths = filenames.map((filename) => {
+      const slug = filename.replace(/\.md$/, '')
+      return {
+        params: {
+          highlight: slug
+        }
       }
-    }
-  })
+    });
+  }
   return { paths, fallback: false }
 }
 
 export const getStaticProps: GetStaticProps = async context => {
-  const highlightName = context.params.highlight
-  const dataDirectory = path.join(process.cwd(), '/data')
-  const filename = 'me.json'
+  const highlightName = context.params.highlight;
+  const dataDirectory = path.join(process.cwd(), '/data');
+  const filename = 'me.json';
 
-  const filePath = path.join(dataDirectory, filename)
-  const fileContents = fs.readFileSync(filePath, 'utf8')
-  const portfolio = JSON.parse(fileContents)
+  const filePath = path.join(dataDirectory, filename);
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const portfolio = JSON.parse(fileContents);
 
   //Load specific highlight from me.json
-  const myHighlight = portfolio.highlights.find((currentHighlight: Highlight) => currentHighlight.slug == highlightName)
+  const myHighlight = portfolio.highlights.find((currentHighlight: Highlight) => currentHighlight.slug == highlightName);
 
   //Load specific highlight markdown file
-  const highlightFilePath = path.join(process.cwd(), `/data/md/highlights/${highlightName}.md`)
+  const highlightFilePath = path.join(process.cwd(), `/data/md/highlights/${highlightName}.md`);
   let highlightFileContents = null;
   let mdData = null;
   let mdContent = null;
   if (fs.existsSync(highlightFilePath)) {
-    highlightFileContents = fs.readFileSync(highlightFilePath, 'utf8')
+    highlightFileContents = fs.readFileSync(highlightFilePath, 'utf8');
     const { data, content } = matter(highlightFileContents);
     mdData = data;
     mdContent = content;
