@@ -75,16 +75,23 @@ export const getStaticProps: GetStaticProps = async context => {
   const myHighlight = portfolio.highlights.find((currentHighlight: Highlight) => currentHighlight.slug == highlightName)
 
   //Load specific highlight markdown file
-  const highlightFile = path.join(process.cwd(), `/data/md/highlights/${highlightName}.md`)
-  const highlightFileContents = fs.readFileSync(highlightFile, 'utf8')
-  const { data, content } = matter(highlightFileContents)
+  const highlightFilePath = path.join(process.cwd(), `/data/md/highlights/${highlightName}.md`)
+  let highlightFileContents = null;
+  let mdData = null;
+  let mdContent = null;
+  if (fs.existsSync(highlightFilePath)) {
+    highlightFileContents = fs.readFileSync(highlightFilePath, 'utf8')
+    const { data, content } = matter(highlightFileContents);
+    mdData = data;
+    mdContent = content;
+  }
 
   return {
     props: {
       portfolio,
       myHighlight,
-      mdData: data,
-      mdContent: content
+      mdData: mdData,
+      mdContent: mdContent
     }
   }
 }
