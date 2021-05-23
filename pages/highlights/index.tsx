@@ -11,6 +11,7 @@ import Page from '../../components/page';
 import Meta from '../../components/Meta';
 import { Portfolio } from '../../types/portfolio.types';
 import { GetStaticProps } from 'next';
+import HighlightsContainer from '../../components/highlightsListContainer';
 
 export default function Highlights({ portfolio }: { portfolio: Portfolio }) {
 
@@ -22,7 +23,7 @@ export default function Highlights({ portfolio }: { portfolio: Portfolio }) {
         canonical={`${process.env.PUBLIC_URL}/highlights`} />
 
       <Page portfolio={portfolio}>
-
+        <HighlightsContainer highlights={portfolio.highlights} />
       </Page>
     </div >
   )
