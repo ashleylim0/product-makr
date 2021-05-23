@@ -49,44 +49,56 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const projectsDirectory = path.join(process.cwd(), '/data/md/projects')
-  const filenames = fs.readdirSync(projectsDirectory)
+  const dataDirectory = path.join(process.cwd(), '/data');
+  const filename = 'me.json';
 
-  const paths = filenames.map((filename) => {
-    const slug = filename.replace(/\.md$/, '')
+  const filePath = path.join(dataDirectory, filename);
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const portfolio = JSON.parse(fileContents);
+
+  const paths = portfolio.projects.map((project: Project) => {
     return {
       params: {
-        project: slug
+        project: project.slug
       }
     }
-  })
+  });
+
+
   return { paths, fallback: false }
 }
 
 
 export const getStaticProps: GetStaticProps = async context => {
-  const projectName = context.params.project
-  const dataDirectory = path.join(process.cwd(), '/data')
-  const filename = 'me.json'
+  const projectName = context.params.project;
+  const dataDirectory = path.join(process.cwd(), '/data');
+  const filename = 'me.json';
 
-  const filePath = path.join(dataDirectory, filename)
-  const fileContents = fs.readFileSync(filePath, 'utf8')
-  const portfolio = JSON.parse(fileContents)
+  const filePath = path.join(dataDirectory, filename);
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const portfolio = JSON.parse(fileContents);
 
   //Load specific project from me.json
-  const myProject = portfolio.projects.find((currentProject: Project) => currentProject.slug == projectName)
+  const myProject = portfolio.projects.find((currentProject: Project) => currentProject.slug == projectName);
 
   //Load specific project markdown file
-  const projectFile = path.join(process.cwd(), `/data/md/projects/${projectName}.md`)
-  const projectFileContents = fs.readFileSync(projectFile, 'utf8')
-  const { data, content } = matter(projectFileContents)
+  const projectFilePath = path.join(process.cwd(), `/data/md/projects/${projectName}.md`);
+  let projectFileContents = null;
+  let mdData = null;
+  let mdContent = null;
+  if (fs.existsSync(projectFilePath)) {
+    projectFileContents = fs.readFileSync(projectFilePath, 'utf8');
+    const { data, content } = matter(projectFileContents);
+    mdData = data;
+    mdContent = content;
+  }
 
   return {
     props: {
       portfolio,
       myProject,
-      mdData: data,
-      mdContent: content
+      mdData: mdData,
+      mdContent: mdContent
     }
   }
 }

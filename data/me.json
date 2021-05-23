@@ -53,7 +53,7 @@
       ]
     },
     {
-      "slug": "project-slug",
+      "slug": "blissful",
       "title": "Blissful Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
       "role": "Product Manager, Designer, Developer etc",
@@ -67,7 +67,7 @@
       ]
     },
     {
-      "slug": "project-slug2",
+      "slug": "relish",
       "title": "Relish Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
       "role": "Product Manager, Designer, Developer etc",
@@ -81,7 +81,7 @@
       ]
     },
     {
-      "slug": "project-slug3",
+      "slug": "adnotes",
       "title": "AdNotes Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
       "role": "Product Manager, Designer, Developer etc",
@@ -95,7 +95,7 @@
       ]
     },
     {
-      "slug": "project-slug4",
+      "slug": "vina-dev",
       "title": "Vina.Dev",
       "summary": "This is a quick summary of Awesome Example App",
       "role": "Product Manager, Designer, Developer etc",
@@ -106,10 +106,10 @@
   ],
   "highlights": [
     {
-      "slug": "highlight-slug",
-      "title": "Awesome Case Study OR Blog Post Title",
+      "slug": "case-study-peloton-social-community",
+      "title": "Case Study: Peloton In-app Social Community",
       "summary": "This is a quick summary of Awesome Case Study",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+      "url": "https://rede.io/case-study-peloton-in-app-social-community/"
     },
     {
       "slug": "highlight-slug1",

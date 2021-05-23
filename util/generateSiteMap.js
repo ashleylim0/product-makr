@@ -1,8 +1,19 @@
 const fs = require('fs');
 const globby = require('globby');
+const path = require('path');
 
 async function generateSiteMap() {
-  const pages = await globby([
+  const portfolioFilePath = path.join(process.cwd(), '/data/me.json');
+  const fileContents = fs.readFileSync(portfolioFilePath, 'utf8');
+  const portfolio = JSON.parse(fileContents);
+
+  //Load project paths from portfolio json file
+  const projectPaths = await portfolio.projects.map((project) => {
+    return `/projects/${project.slug}`
+  });
+
+  //Load all next page paths + md file paths
+  const filePaths = await globby([
     'pages/**/*.tsx',
     '!pages/_*.tsx',
     '!pages/404.tsx',
@@ -10,9 +21,11 @@ async function generateSiteMap() {
     '!pages/**/[project].tsx',
     '!pages/**/[highlight].tsx',
     '!pages/api',
-    'data/md/highlights/*.md',
-    'data/md/projects/*.md'
+    'data/md/highlights/*.md'
   ])
+
+  //Combine page paths & project paths
+  const pages = filePaths.concat(projectPaths)
 
   const sitemap =
     `<?xml version="1.0" encoding="UTF-8"?>
@@ -27,7 +40,6 @@ async function generateSiteMap() {
           .replace('.js', '')
           .replace('.md', '')
           .replace('data/md/highlights', '/highlights')
-          .replace('data/md/projects', '/projects')
           .replace('data/md', '')
           .replace('projects/index', 'projects')
           .replace('highlights/index', 'highlights')
