@@ -169,6 +169,7 @@
   "theme": {
     "accentColor": "red | blue | green | purple",
     "emoji": "🔭",
-    "quote": "\"Be yourself; everyone else is already taken.\" - Oscar Wilde"
+    "quote": "\"Be yourself; everyone else is already taken.\" - Oscar Wilde",
+    "makrCredit": true
   }
 }

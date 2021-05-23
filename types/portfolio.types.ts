@@ -43,6 +43,7 @@ export interface Portfolio {
     theme: {
         accentColor: string,
         emoji: string,
-        quote: string
+        quote: string,
+        makrCredit: boolean
     }
 }

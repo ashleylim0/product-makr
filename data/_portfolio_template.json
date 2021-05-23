@@ -82,6 +82,7 @@
   "theme": {
     "accentColor": "",
     "emoji": "",
-    "quote": ""
+    "quote": "",
+    "makrCredit": true | false
   }
 }
