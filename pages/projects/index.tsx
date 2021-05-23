@@ -11,6 +11,7 @@ import Page from '../../components/page';
 import Meta from '../../components/Meta';
 import { Portfolio } from '../../types/portfolio.types';
 import { GetStaticProps } from 'next';
+import ProjectsContainer from '../../components/projectsListContainer';
 
 export default function Projects({ portfolio }: { portfolio: Portfolio }) {
 
@@ -22,7 +23,7 @@ export default function Projects({ portfolio }: { portfolio: Portfolio }) {
         canonical={`${process.env.PUBLIC_URL}/projects`} />
 
       <Page portfolio={portfolio}>
-        {/* <Projects /> */}
+        <ProjectsContainer projects={portfolio.projects} />
       </Page>
     </div >
   )

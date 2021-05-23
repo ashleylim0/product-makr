@@ -14,11 +14,38 @@ import Page from '../components/page';
 import Meta from '../components/Meta';
 import { Portfolio } from '../types/portfolio.types';
 import { GetStaticProps } from 'next';
+import { useRouter } from 'next/router';
 import ProjectCard from '../components/projectCard';
 import HighlightCard from '../components/highlightCard';
 import EndorsementItem from '../components/endorsementItem';
+import ProjectsModal from '../components/projectsModal';
+import HighlightsModal from '../components/highlightsModal';
 
 export default function Home({ portfolio, summary }: { portfolio: Portfolio, summary: string }) {
+  const router = useRouter();
+
+  const [projectsModalOpen, setProjectsModalOpen] = useState(false);
+  const [highlightsModalOpen, setHighlightsModalOpen] = useState(false);
+
+  const openProjectsModal = () => {
+    router.push(`/`, `/projects`, { shallow: true });
+    setProjectsModalOpen(true);
+  }
+
+  const openHighlightsModal = () => {
+    router.push(`/`, `/highlights`, { shallow: true });
+    setHighlightsModalOpen(true);
+  }
+
+  const closeProjectsModal = () => {
+    router.push(`/`, `/`, { shallow: true });
+    setProjectsModalOpen(false);
+  }
+
+  const closeHighlightsModal = () => {
+    router.push(`/`, `/`, { shallow: true });
+    setHighlightsModalOpen(false);
+  }
 
   return (
     <div>
@@ -57,8 +84,15 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
               </Header>
                   {portfolio.projects.slice(0, 3).map((project: any) =>
                     <ProjectCard key={project.slug} project={project} />)}
-                  {portfolio.highlights.length > 3 ?
-                    <Button color='black' style={{ marginTop: '24px' }} fluid>View All Projects</Button>
+                  {portfolio.projects.length > 3 ?
+                    <Button
+                      color='black'
+                      style={{ marginTop: '24px' }}
+                      fluid
+                      onClick={(e) => {
+                        openProjectsModal();
+                      }}
+                    >View All Projects</Button>
                     : null}
                 </Grid.Column>
               </Grid.Row> : null
@@ -74,7 +108,14 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                     <HighlightCard key={myHighlight.slug} myHighlight={myHighlight} />
                   )}
                   {portfolio.highlights.length > 3 ?
-                    <Button color='black' style={{ marginTop: '24px' }} fluid>View All Highlights</Button>
+                    <Button
+                      color='black'
+                      style={{ marginTop: '24px' }}
+                      fluid
+                      onClick={(e) => {
+                        openHighlightsModal();
+                      }}
+                    >View All Highlights</Button>
                     : null}
                 </Grid.Column>
               </Grid.Row> : null
@@ -91,6 +132,20 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
           </Grid>
         </Container>
       </Page>
+      {projectsModalOpen ?
+        <ProjectsModal
+          projects={portfolio.projects}
+          open={projectsModalOpen}
+          onClose={() => closeProjectsModal()}
+        /> : null
+      }
+      {highlightsModalOpen ?
+        <HighlightsModal
+          highlights={portfolio.highlights}
+          open={highlightsModalOpen}
+          onClose={() => closeHighlightsModal()}
+        /> : null
+      }
     </div >
   )
 }
