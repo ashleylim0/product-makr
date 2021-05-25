@@ -8,6 +8,11 @@
     /* Gecko Browsers */
 }
 
+.ui.label.role-label {
+    color: #658595;
+    background-color: #D5EDFB;
+}
+
 .footer-text {
     color: #707988;
     font-size: 1.33em;
@@ -69,12 +74,12 @@
 .card-title {
     color: #1A202C;
     position: 'relative';
-    font-size: 1.5em;
+    font-size: 1.8em;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
     /* number of lines to show */
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
     -webkit-box-orient: vertical;
 }
 
@@ -92,6 +97,10 @@
     color: #555B66;
     text-overflow: ellipsis;
     display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* number of lines to show */
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
 }
 

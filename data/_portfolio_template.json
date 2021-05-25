@@ -43,18 +43,21 @@
       "slug": "project-slug-NO-SPACES",
       "title": "Awesome Example App",
       "summary": "This is a quick summary of Awesome Example App",
-      "role": "Product Manager, Designer, Developer etc",
+      "roles": [
+        "Product Manager",
+        "Developer"
+      ],
       "status": "Live | Dead | WIP",
       "links": [
         {
           "text": "Download app | View website | Read case study | etc",
           "url": "https://MyExampleApp.com",
-          "icon": ""
+          "icon": "FIND ICONS HERE: https://react.semantic-ui.com/elements/icon/"
         },
         {
           "text": "Get source code",
           "url": "https://github.com/USERNAME/REPO-NAME",
-          "icon": ""
+          "icon": "FIND ICONS HERE: https://react.semantic-ui.com/elements/icon/"
         }
       ],
       "testimonials": [
@@ -70,7 +73,7 @@
       "slug": "case-slug-NO-SPACES",
       "title": "Awesome Example App",
       "summary": "This is a quick summary of Awesome Example App",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+      "url": "External link to blog post OR /highlights/case-slug-NO-SPACES (Markdown file in folder /data/md/highlights/)"
     }
   ],
   "endorsements": [
@@ -83,6 +86,6 @@
     "accentColor": "",
     "emoji": "",
     "quote": "",
-    "makrCredit": true | false
+    "makrCredit": true
   }
 }

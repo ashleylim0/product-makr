@@ -29,20 +29,19 @@
   "projects": [
     {
       "slug": "delightful",
-      "title": "Delightful Mobile App",
-      "summary": "This is a quick summary of Awesome Example App",
-      "role": "Product Manager, Designer, Developer etc",
+      "title": "Delightful Gratitude Journal App",
+      "summary": "The Delightful mobile app is a lightweight gratitude journal for Android & iOS to record 3 good things from your day. Delightful was built with privacy in mind and includes backup, prompts, themes, & daily reminders.",
+      "roles": [
+        "Product Manager",
+        "Designer",
+        "Developer"
+      ],
       "status": "Live",
       "links": [
         {
-          "text": "Download app | View website | Read case study | etc",
+          "text": "Download App",
           "url": "https://delightfuljournal.com",
-          "icon": ""
-        },
-        {
-          "text": "Get source code",
-          "url": "https://github.com/USERNAME/REPO-NAME",
-          "icon": ""
+          "icon": "external"
         }
       ],
       "testimonials": [
@@ -53,24 +52,80 @@
       ]
     },
     {
+      "slug": "tech-viet",
+      "title": "Tech Viet - A View into Vietnam Tech",
+      "summary": "Vietnam Tech Ecosystem open-sourced. Tech Viet is an open-source website built with React & Next.js listing 200 technology companies in Vietnam.",
+      "roles": [
+        "Product Manager",
+        "Developer"
+      ],
+      "status": "Live",
+      "links": [
+        {
+          "text": "Visit",
+          "url": "https://tech.viet.io",
+          "icon": "external"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/renedeanda/tech.viet",
+          "icon": "github"
+        }
+      ],
+      "testimonials": []
+    },
+    {
+      "slug": "vina-dev",
+      "title": "Vina.Dev",
+      "summary": "Mobile optimized portfolio pages for developers to build their personal brands & find opportunity.",
+      "roles": [
+        "Product Manager",
+        "Designer",
+        "Developer"
+      ],
+      "status": "Live",
+      "links": [
+        {
+          "text": "Visit",
+          "url": "https://vina.dev/rene",
+          "icon": "external"
+        }
+      ],
+      "testimonials": []
+    },
+    {
+      "slug": "product-makr",
+      "title": "Product Makr: Open-source Product Manager Portfolios",
+      "summary": "Open-source project to help Product Managers make portfolio pages and improve their job hunt.",
+      "roles": [
+        "Product Manager",
+        "Designer",
+        "Developer"
+      ],
+      "status": "Live",
+      "links": [
+        {
+          "text": "Visit",
+          "url": "https://product.makr.io",
+          "icon": "external"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/renedeanda/product-makr",
+          "icon": "github"
+        }
+      ],
+      "testimonials": []
+    },
+    {
       "slug": "blissful",
       "title": "Blissful Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
-      "role": "Product Manager, Designer, Developer etc",
-      "status": "Dead",
-      "links": [],
-      "testimonials": [
-        {
-          "name": "Jane Smith",
-          "text": "This app is awesome..."
-        }
-      ]
-    },
-    {
-      "slug": "relish",
-      "title": "Relish Mobile App",
-      "summary": "This is a quick summary of Awesome Example App",
-      "role": "Product Manager, Designer, Developer etc",
+      "roles": [
+        "Product Manager",
+        "Designer",
+        "Developer"
+      ],
       "status": "Dead",
       "links": [],
       "testimonials": [
@@ -84,9 +139,24 @@
       "slug": "adnotes",
       "title": "AdNotes Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
-      "role": "Product Manager, Designer, Developer etc",
+      "roles": [
+        "Product Manager",
+        "Designer",
+        "Developer"
+      ],
       "status": "Dead",
-      "links": [],
+      "links": [
+        {
+          "text": "Download App",
+          "url": "https://play.google.com/store/apps/details?id=com.dcrtns.adnotebook",
+          "icon": "google play"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/renedeanda/AdNotes",
+          "icon": "github"
+        }
+      ],
       "testimonials": [
         {
           "name": "Jane Smith",
@@ -95,10 +165,14 @@
       ]
     },
     {
-      "slug": "vina-dev",
-      "title": "Vina.Dev",
+      "slug": "relish",
+      "title": "Relish Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
-      "role": "Product Manager, Designer, Developer etc",
+      "roles": [
+        "Product Manager",
+        "Designer",
+        "Developer"
+      ],
       "status": "Dead",
       "links": [],
       "testimonials": []
@@ -106,34 +180,28 @@
   ],
   "highlights": [
     {
-      "slug": "case-study-peloton-social-community",
+      "slug": "custom-product-case",
+      "title": "Custom Product Case",
+      "summary": "This is a custom case write-up with Markdown",
+      "url": "/highlights/custom-product-case"
+    },
+    {
+      "slug": "case-study-peloton-in-app-social-community",
       "title": "Case Study: Peloton In-app Social Community",
       "summary": "This is a quick summary of Awesome Case Study",
       "url": "https://rede.io/case-study-peloton-in-app-social-community/"
     },
     {
-      "slug": "highlight-slug1",
-      "title": "Awesome Case Study OR Blog Post Title",
-      "summary": "This is a quick summary of Awesome Case Study",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+      "slug": "what-is-a-good-product-manager-to-peers",
+      "title": "What is a Good Product Manager to Peers?",
+      "summary": "Some takeaways on what a good product manager is to peers.",
+      "url": "https://rede.io/what-is-a-good-product-manager-to-peers/"
     },
     {
-      "slug": "highlight-slug2",
-      "title": "Awesome Case Study OR Blog Post Title",
-      "summary": "This is a quick summary of Awesome Case Study",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
-    },
-    {
-      "slug": "highlight-slug3",
-      "title": "Awesome Case Study OR Blog Post Title",
-      "summary": "This is a quick summary of Awesome Case Study",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
-    },
-    {
-      "slug": "highlight-slug4",
-      "title": "Awesome Case Study OR Blog Post Title",
-      "summary": "This is a quick summary of Awesome Case Study",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+      "slug": "product-manager-cover-letter",
+      "title": "Career Journey: PM Cover Letter",
+      "summary": "My cover letter for my non-traditional career journey of teaching myself to code and building products people love.",
+      "url": "https://rede.io/product-manager-cover-letter/"
     }
   ],
   "endorsements": [

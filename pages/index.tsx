@@ -18,28 +18,17 @@ import { useRouter } from 'next/router';
 import ProjectCard from '../components/projectCard';
 import HighlightCard from '../components/highlightCard';
 import EndorsementItem from '../components/endorsementItem';
-import ProjectsModal from '../components/projectsModal';
 import HighlightsModal from '../components/highlightsModal';
+import Link from 'next/link';
 
 export default function Home({ portfolio, summary }: { portfolio: Portfolio, summary: string }) {
   const router = useRouter();
 
-  const [projectsModalOpen, setProjectsModalOpen] = useState(false);
   const [highlightsModalOpen, setHighlightsModalOpen] = useState(false);
-
-  const openProjectsModal = () => {
-    router.push(`/`, `/projects`, { shallow: true });
-    setProjectsModalOpen(true);
-  }
 
   const openHighlightsModal = () => {
     router.push(`/`, `/highlights`, { shallow: true });
     setHighlightsModalOpen(true);
-  }
-
-  const closeProjectsModal = () => {
-    router.push(`/`, `/`, { shallow: true });
-    setProjectsModalOpen(false);
   }
 
   const closeHighlightsModal = () => {
@@ -56,7 +45,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
         canonical={`${process.env.PUBLIC_URL}`} />
 
       <Page portfolio={portfolio}>
-        <Container style={{ width: '100vw', margin: '3em 0' }}>
+        <Container style={{ width: '100vw', margin: '2.2em 0' }}>
           <Grid
             style={{ padding: '1.5em 1em 1.5em', }}
             centered
@@ -85,15 +74,16 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                   {portfolio.projects.slice(0, 3).map((project: any) =>
                     <ProjectCard key={project.slug} project={project} />)}
                   {portfolio.projects.length > 3 ?
-                    <Button
-                      color='black'
-                      style={{ marginTop: '24px' }}
-                      fluid
-                      onClick={(e) => {
-                        openProjectsModal();
-                      }}
-                    >View All Projects</Button>
+                    <Link href='/projects' passHref>
+                      <Button
+                        as='a'
+                        color='black'
+                        style={{ marginTop: '24px' }}
+                        fluid
+                      >View All Projects</Button>
+                    </Link>
                     : null}
+
                 </Grid.Column>
               </Grid.Row> : null
             }
@@ -132,13 +122,6 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
           </Grid>
         </Container>
       </Page>
-      {projectsModalOpen ?
-        <ProjectsModal
-          projects={portfolio.projects}
-          open={projectsModalOpen}
-          onClose={() => closeProjectsModal()}
-        /> : null
-      }
       {highlightsModalOpen ?
         <HighlightsModal
           highlights={portfolio.highlights}

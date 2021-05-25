@@ -2,7 +2,7 @@ export interface Project {
     slug: string,
     title: string,
     summary: string,
-    role: string,
+    roles: [string],
     status: string,
     links: [{
         text: string,

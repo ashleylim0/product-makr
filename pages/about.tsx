@@ -28,8 +28,9 @@ export default function About({ portfolio, mdData, mdContent }: {
         canonical={`${process.env.PUBLIC_URL}/about`} />
 
       <Page portfolio={portfolio}>
-        <Container style={{ width: '100vw', margin: '3em 0' }}>
+        <Container style={{ width: '100vw', margin: '2.2em 0' }}>
           <Grid
+            style={{ padding: '1.5em 1em 1.5em', }}
             container
             stackable
             textAlign='center'

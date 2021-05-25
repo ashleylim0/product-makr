@@ -17,7 +17,7 @@ export default function ProjectsContainer({ projects, modal }: {
   return (
     <>
       <Grid
-        style={{ padding: '1.5em 0 1.5em', margin: '3em 0' }}
+        style={{ padding: '1.5em 0 1.5em', margin: '2.2em 0' }}
         centered
         stackable
         textAlign='center'
