@@ -70,7 +70,7 @@
       "slug": "case-slug-NO-SPACES",
       "title": "Awesome Example App",
       "summary": "This is a quick summary of Awesome Example App",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+      "url": "External link to blog post OR /highlights/case-slug-NO-SPACES (Markdown file in folder /data/md/highlights/)"
     }
   ],
   "endorsements": [
@@ -83,6 +83,6 @@
     "accentColor": "",
     "emoji": "",
     "quote": "",
-    "makrCredit": true | false
+    "makrCredit": true
   }
 }

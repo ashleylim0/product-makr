@@ -35,9 +35,9 @@
       "status": "Live",
       "links": [
         {
-          "text": "Download app | View website | Read case study | etc",
+          "text": "Download App",
           "url": "https://delightfuljournal.com",
-          "icon": ""
+          "icon": "external alternate"
         },
         {
           "text": "Get source code",
@@ -86,7 +86,18 @@
       "summary": "This is a quick summary of Awesome Example App",
       "role": "Product Manager, Designer, Developer etc",
       "status": "Dead",
-      "links": [],
+      "links": [
+        {
+          "text": "Download App",
+          "url": "https://play.google.com/store/apps/details?id=com.dcrtns.adnotebook",
+          "icon": "google play"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/renedeanda/AdNotes",
+          "icon": ""
+        }
+      ],
       "testimonials": [
         {
           "name": "Jane Smith",
@@ -106,34 +117,28 @@
   ],
   "highlights": [
     {
-      "slug": "case-study-peloton-social-community",
+      "slug": "custom-product-case",
+      "title": "Custom Product Case",
+      "summary": "This is a custom case write-up with Markdown",
+      "url": "/highlights/custom-product-case"
+    },
+    {
+      "slug": "case-study-peloton-in-app-social-community",
       "title": "Case Study: Peloton In-app Social Community",
       "summary": "This is a quick summary of Awesome Case Study",
       "url": "https://rede.io/case-study-peloton-in-app-social-community/"
     },
     {
-      "slug": "highlight-slug1",
-      "title": "Awesome Case Study OR Blog Post Title",
-      "summary": "This is a quick summary of Awesome Case Study",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+      "slug": "what-is-a-good-product-manager-to-peers",
+      "title": "What is a Good Product Manager to Peers?",
+      "summary": "Some takeaways on what a good product manager is to peers.",
+      "url": "https://rede.io/what-is-a-good-product-manager-to-peers/"
     },
     {
-      "slug": "highlight-slug2",
-      "title": "Awesome Case Study OR Blog Post Title",
-      "summary": "This is a quick summary of Awesome Case Study",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
-    },
-    {
-      "slug": "highlight-slug3",
-      "title": "Awesome Case Study OR Blog Post Title",
-      "summary": "This is a quick summary of Awesome Case Study",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
-    },
-    {
-      "slug": "highlight-slug4",
-      "title": "Awesome Case Study OR Blog Post Title",
-      "summary": "This is a quick summary of Awesome Case Study",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+      "slug": "product-manager-cover-letter",
+      "title": "Career Journey: PM Cover Letter",
+      "summary": "My cover letter for my non-traditional career journey of teaching myself to code and building products people love.",
+      "url": "https://rede.io/product-manager-cover-letter/"
     }
   ],
   "endorsements": [

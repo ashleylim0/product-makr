@@ -28,8 +28,9 @@ export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent 
         canonical={`${process.env.PUBLIC_URL}/highlights/${myHighlight.slug}`} />
 
       <Page portfolio={portfolio}>
-        <Container style={{ width: '100vw', margin: '3em 0' }}>
+        <Container style={{ width: '100vw', margin: '2.2em 0' }}>
           <Grid
+            style={{ padding: '1.5em 1em 1.5em', }}
             container
             stackable
             textAlign='center'
@@ -49,12 +50,12 @@ export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent 
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const highlightsDirectory = path.join(process.cwd(), '/data/md/highlights');
-  let paths = []
+  let paths = [];
 
   if (fs.existsSync(highlightsDirectory)) {
     const filenames = fs.readdirSync(highlightsDirectory);
     paths = filenames.map((filename) => {
-      const slug = filename.replace(/\.md$/, '')
+      const slug = filename.replace(/\.md$/, '');
       return {
         params: {
           highlight: slug
