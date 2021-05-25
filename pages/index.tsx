@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import {
   Button,
   Grid,
@@ -14,27 +13,12 @@ import Page from '../components/page';
 import Meta from '../components/Meta';
 import { Portfolio } from '../types/portfolio.types';
 import { GetStaticProps } from 'next';
-import { useRouter } from 'next/router';
 import ProjectCard from '../components/projectCard';
 import HighlightCard from '../components/highlightCard';
 import EndorsementItem from '../components/endorsementItem';
-import HighlightsModal from '../components/highlightsModal';
 import Link from 'next/link';
 
 export default function Home({ portfolio, summary }: { portfolio: Portfolio, summary: string }) {
-  const router = useRouter();
-
-  const [highlightsModalOpen, setHighlightsModalOpen] = useState(false);
-
-  const openHighlightsModal = () => {
-    router.push(`/`, `/highlights`, { shallow: true });
-    setHighlightsModalOpen(true);
-  }
-
-  const closeHighlightsModal = () => {
-    router.push(`/`, `/`, { shallow: true });
-    setHighlightsModalOpen(false);
-  }
 
   return (
     <div>
@@ -98,14 +82,14 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                     <HighlightCard key={myHighlight.slug} myHighlight={myHighlight} />
                   )}
                   {portfolio.highlights.length > 3 ?
-                    <Button
-                      color='black'
-                      style={{ marginTop: '24px' }}
-                      fluid
-                      onClick={(e) => {
-                        openHighlightsModal();
-                      }}
-                    >View All Highlights</Button>
+                    <Link href='/highlights' passHref>
+                      <Button
+                        as='a'
+                        color='black'
+                        style={{ marginTop: '24px' }}
+                        fluid
+                      >View All Highlights</Button>
+                    </Link>
                     : null}
                 </Grid.Column>
               </Grid.Row> : null
@@ -122,13 +106,6 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
           </Grid>
         </Container>
       </Page>
-      {highlightsModalOpen ?
-        <HighlightsModal
-          highlights={portfolio.highlights}
-          open={highlightsModalOpen}
-          onClose={() => closeHighlightsModal()}
-        /> : null
-      }
     </div >
   )
 }

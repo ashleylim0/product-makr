@@ -79,7 +79,6 @@
     text-overflow: ellipsis;
     /* number of lines to show */
     -webkit-line-clamp: 3;
-    display: -webkit-box;
     -webkit-box-orient: vertical;
 }
 
@@ -94,6 +93,7 @@
 }
 
 .tagline {
+    font-size: 1.22em;
     color: #555B66;
     text-overflow: ellipsis;
     display: -webkit-box;
