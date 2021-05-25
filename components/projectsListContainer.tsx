@@ -6,13 +6,9 @@ import {
 import ProjectCard from './projectCard';
 import { Project } from '../types/project.types';
 
-export default function ProjectsContainer({ projects, modal }: {
-  projects: Array<Project>,
-  modal?: boolean
+export default function ProjectsContainer({ projects }: {
+  projects: Array<Project>
 }) {
-
-  const headerColor = modal ? '#fff' : '#212121'
-  const gridWidth = modal ? '12' : '9'
 
   return (
     <>
@@ -23,8 +19,8 @@ export default function ProjectsContainer({ projects, modal }: {
         textAlign='center'
         verticalAlign='middle'>
         <Grid.Row style={{ padding: '0 0 5em' }}>
-          <Grid.Column width={gridWidth}>
-            <Header style={{ color: headerColor, padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+          <Grid.Column width='9'>
+            <Header style={{ color: '#212121', padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
               Projects
                 </Header>
             {projects.map((item: any) =>

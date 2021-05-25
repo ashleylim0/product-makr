@@ -5,13 +5,9 @@ import {
 import HighlightCard from './highlightCard';
 import { Highlight } from '../types/highlight.types';
 
-export default function HighlightsContainer({ highlights, modal }: {
-  highlights: Array<Highlight>,
-  modal?: boolean
+export default function HighlightsContainer({ highlights }: {
+  highlights: Array<Highlight>
 }) {
-
-  const headerColor = modal ? '#fff' : '#212121'
-  const gridWidth = modal ? '12' : '9'
 
   return (
     <>
@@ -22,8 +18,8 @@ export default function HighlightsContainer({ highlights, modal }: {
         textAlign='center'
         verticalAlign='middle'>
         <Grid.Row style={{ padding: '0 0 5em' }}>
-          <Grid.Column width={gridWidth}>
-            <Header style={{ color: headerColor, padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+          <Grid.Column width='9'>
+            <Header style={{ color: '#212121', padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
               Blog &amp; Case Highlights
               </Header>
             {highlights.map((item: any) =>
