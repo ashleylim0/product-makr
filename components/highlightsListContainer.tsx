@@ -21,7 +21,7 @@ export default function HighlightsContainer({ highlights, modal }: {
         stackable
         textAlign='center'
         verticalAlign='middle'>
-        <Grid.Row>
+        <Grid.Row style={{ padding: '0 0 5em' }}>
           <Grid.Column width={gridWidth}>
             <Header style={{ color: headerColor, padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
               Blog &amp; Case Highlights
