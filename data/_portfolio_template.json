@@ -43,18 +43,21 @@
       "slug": "project-slug-NO-SPACES",
       "title": "Awesome Example App",
       "summary": "This is a quick summary of Awesome Example App",
-      "role": "Product Manager, Designer, Developer etc",
+      "roles": [
+        "Product Manager",
+        "Developer"
+      ],
       "status": "Live | Dead | WIP",
       "links": [
         {
           "text": "Download app | View website | Read case study | etc",
           "url": "https://MyExampleApp.com",
-          "icon": ""
+          "icon": "FIND ICONS HERE: https://react.semantic-ui.com/elements/icon/"
         },
         {
           "text": "Get source code",
           "url": "https://github.com/USERNAME/REPO-NAME",
-          "icon": ""
+          "icon": "FIND ICONS HERE: https://react.semantic-ui.com/elements/icon/"
         }
       ],
       "testimonials": [
