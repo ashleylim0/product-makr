@@ -23,13 +23,16 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
   mdContent: any
 }) {
 
+  const shareImage = myProject.shareImageUrl ? `${process.env.PUBLIC_URL}${myProject.shareImageUrl}` : '/share.png'
+
   //TODO revisit, load markdown files properly & get data for initial props
   return (
     <div>
       <Meta
         title={`${myProject.title} | ${portfolio.name}`}
         desc={`${myProject.summary}`}
-        canonical={`${process.env.PUBLIC_URL}/projects/${myProject.slug}`} />
+        canonical={`${process.env.PUBLIC_URL}/projects/${myProject.slug}`}
+        image={shareImage} />
 
       <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '2.2em 0' }}>

@@ -74,10 +74,11 @@
   ],
   "highlights": [
     {
-      "slug": "case-slug-NO-SPACES",
+      "slug": "highlight-slug-NO-SPACES",
       "title": "Awesome Example App",
       "summary": "This is a quick summary of Awesome Example App",
-      "url": "External link to blog post OR /highlights/case-slug-NO-SPACES (Markdown file in folder /data/md/highlights/)"
+      "url": "External link to blog post OR /highlights/case-slug-NO-SPACES (Markdown file in folder /data/md/highlights/)",
+      "shareImageUrl": "/images/highlights/highlight-slug-NO-SPACES/share.jpg (image file in folder /public/images/highlights/highlight-slug-NO-SPACES/)"
     }
   ],
   "endorsements": [
