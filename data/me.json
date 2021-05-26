@@ -59,6 +59,29 @@
       ]
     },
     {
+      "slug": "vina-dev",
+      "title": "Vina.Dev",
+      "summary": "Mobile optimized portfolio pages for developers to build their personal brands & find opportunity.",
+      "shareImageUrl": "/images/projects/vina-dev/share.jpg",
+      "roles": [
+        "Product Manager",
+        "Developer"
+      ],
+      "keywords": [
+        "Web",
+        "React",
+        "Node.js"
+      ],
+      "links": [
+        {
+          "text": "Visit",
+          "url": "https://vina.dev/rene",
+          "icon": "external"
+        }
+      ],
+      "testimonials": []
+    },
+    {
       "slug": "tech-viet",
       "title": "Tech Viet - A View into Vietnam Tech",
       "summary": "Vietnam Tech Ecosystem open-sourced. Tech Viet is an open-source website built with React & Next.js listing 200 technology companies in Vietnam.",
@@ -83,29 +106,6 @@
           "text": "GitHub",
           "url": "https://github.com/renedeanda/tech.viet",
           "icon": "github"
-        }
-      ],
-      "testimonials": []
-    },
-    {
-      "slug": "vina-dev",
-      "title": "Vina.Dev",
-      "summary": "Mobile optimized portfolio pages for developers to build their personal brands & find opportunity.",
-      "shareImageUrl": "/images/projects/vina-dev/share.jpg",
-      "roles": [
-        "Product Manager",
-        "Developer"
-      ],
-      "keywords": [
-        "Web",
-        "React",
-        "Node.js"
-      ],
-      "links": [
-        {
-          "text": "Visit",
-          "url": "https://vina.dev/rene",
-          "icon": "external"
         }
       ],
       "testimonials": []
@@ -143,7 +143,7 @@
       "slug": "blissful",
       "title": "Blissful Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
-      "shareImageUrl": "",
+      "shareImageUrl": "/images/projects/blissful/share.jpg",
       "roles": [
         "Product Manager",
         "Developer"
@@ -165,7 +165,7 @@
       "slug": "adnotes",
       "title": "AdNotes Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
-      "shareImageUrl": "",
+      "shareImageUrl": "/images/projects/adnotes/share.jpg",
       "roles": [
         "Product Manager",
         "Developer"
