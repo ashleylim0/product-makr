@@ -43,6 +43,7 @@
       "slug": "project-slug-NO-SPACES",
       "title": "Awesome Example App",
       "summary": "This is a quick summary of Awesome Example App",
+      "shareImageUrl": "/images/projects/project-slug-NO-SPACES/share.jpg (image file in folder /public/images/projects/project-slug-NO-SPACES/)",
       "roles": [
         "Product Manager",
         "Developer"

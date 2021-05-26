@@ -31,6 +31,7 @@
       "slug": "delightful",
       "title": "Delightful Gratitude Journal App",
       "summary": "The Delightful mobile app is a lightweight gratitude journal for Android & iOS to record 3 good things from your day. Delightful was built with privacy in mind. The app includes backup, prompts, themes, & daily reminders.",
+      "shareImageUrl": "/images/projects/delightful/share.jpg",
       "roles": [
         "Product Manager",
         "Designer",
@@ -61,6 +62,7 @@
       "slug": "tech-viet",
       "title": "Tech Viet - A View into Vietnam Tech",
       "summary": "Vietnam Tech Ecosystem open-sourced. Tech Viet is an open-source website built with React & Next.js listing 200 technology companies in Vietnam.",
+      "shareImageUrl": "/images/projects/tech-viet/share.jpg",
       "roles": [
         "Product Manager",
         "Developer"
@@ -89,6 +91,7 @@
       "slug": "vina-dev",
       "title": "Vina.Dev",
       "summary": "Mobile optimized portfolio pages for developers to build their personal brands & find opportunity.",
+      "shareImageUrl": "/images/projects/vina-dev/share.jpg",
       "roles": [
         "Product Manager",
         "Developer"
@@ -111,6 +114,7 @@
       "slug": "product-makr",
       "title": "Product Makr: Open-source Product Manager Portfolios",
       "summary": "Open-source project to help Product Managers make portfolio pages and improve their job hunt.",
+      "shareImageUrl": "/images/projects/product-makr/share.jpg",
       "roles": [
         "Product Manager",
         "Developer"
@@ -139,6 +143,7 @@
       "slug": "blissful",
       "title": "Blissful Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
+      "shareImageUrl": "",
       "roles": [
         "Product Manager",
         "Developer"
@@ -160,6 +165,7 @@
       "slug": "adnotes",
       "title": "AdNotes Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
+      "shareImageUrl": "",
       "roles": [
         "Product Manager",
         "Developer"

@@ -2,11 +2,11 @@
 title: 'Markdown Project Template'
 author:
   name: 'Jane Smith'
-  picture: '/img/about/me.jpeg'
+  picture: '/images/about/me.jpeg'
 date: '2021-01-01'
-coverImage: '/img/projects/project-slug/cover.jpg'
+coverImage: '/images/projects/project-slug/cover.jpg'
 ogImage:
-  url: '/img/projects/project-slug/cover.jpg'
+  url: '/images/projects/project-slug/cover.jpg'
 ---
 
 I **love** making stuff.

@@ -2,11 +2,11 @@
 title: 'About Template'
 author:
   name: 'Jane Smith'
-  picture: '/img/about/me.jpeg'
+  picture: '/images/about/me.jpeg'
 date: '2021-01-01'
-coverImage: '/img/about/cover.jpg'
+coverImage: '/images/about/cover.jpg'
 ogImage:
-  url: '/img/about/cover.jpg'
+  url: '/images/about/cover.jpg'
 ---
 
 I **love** making stuff.

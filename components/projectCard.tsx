@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Card, Label, Icon } from 'semantic-ui-react';
 import { Project } from '../types/project.types';
 
@@ -12,9 +13,17 @@ export default function ProjectCard({ project }: {
         as="a"
         key={project.slug}
         fluid
-        style={{ boxShadow: '0 0 30px 0 rgb(0 0 0 / 12%)', borderRadius: '8px', padding: '12px', marginTop: '30px' }}>
+        style={{ boxShadow: '0 0 30px 0 rgb(0 0 0 / 12%)', borderRadius: '8px', padding: '10px', marginTop: '30px' }}>
         <Card.Content textAlign='left'>
-          <div>
+          {project.shareImageUrl ?
+            <Image
+              alt={project.title}
+              height={300}
+              width={750}
+              src={project.shareImageUrl}
+              className='card-image-header'
+            /> : null}
+          <div style={{ marginTop: '8px' }}>
             <h2 className='card-title' style={{ display: 'inline' }}>{project.title}</h2>
             <Icon name='arrow right' style={{ float: 'right', fontSize: '1.33em', paddingTop: '8px' }} />
           </div>
