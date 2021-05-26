@@ -3,7 +3,7 @@ export interface Project {
     title: string,
     summary: string,
     roles: [string],
-    status: string,
+    keywords: [string],
     links: [{
         text: string,
         url: string,

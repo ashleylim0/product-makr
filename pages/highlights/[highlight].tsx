@@ -1,6 +1,9 @@
 import {
+  Card,
   Grid,
-  Container
+  Container,
+  Label,
+  Icon
 } from 'semantic-ui-react';
 import fs from 'fs';
 import path from 'path';
@@ -37,6 +40,20 @@ export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent 
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '0.5em' }}>
               <Grid.Column>
+                <Card
+                  key={myHighlight.slug}
+                  fluid
+                  style={{ boxShadow: '0 0 30px 0 rgb(0 0 0 / 12%)', borderRadius: '8px', padding: '8px', marginTop: '30px' }}>
+                  <Card.Content textAlign='left'>
+                    <div>
+                      <h2 className='card-title' style={{ marginTop: 0, marginBottom: '16px', display: 'inline' }}>{myHighlight.title}</h2>
+                    </div>
+                    <p style={{ marginTop: '8px' }} className='tagline'>
+                      {myHighlight.summary
+                        ? myHighlight.summary : null}
+                    </p>
+                  </Card.Content>
+                </Card >
                 <p>{myHighlight.title}</p>
                 <ReactMarkdown children={mdContent} />
               </Grid.Column>

@@ -47,7 +47,10 @@
         "Product Manager",
         "Developer"
       ],
-      "status": "Live | Dead | WIP",
+      "keywords": [
+        "Mobile",
+        "Web"
+      ],
       "links": [
         {
           "text": "Download app | View website | Read case study | etc",

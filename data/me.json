@@ -30,13 +30,19 @@
     {
       "slug": "delightful",
       "title": "Delightful Gratitude Journal App",
-      "summary": "The Delightful mobile app is a lightweight gratitude journal for Android & iOS to record 3 good things from your day. Delightful was built with privacy in mind and includes backup, prompts, themes, & daily reminders.",
+      "summary": "The Delightful mobile app is a lightweight gratitude journal for Android & iOS to record 3 good things from your day. Delightful was built with privacy in mind. The app includes backup, prompts, themes, & daily reminders.",
       "roles": [
         "Product Manager",
         "Designer",
         "Developer"
       ],
-      "status": "Live",
+      "keywords": [
+        "Mobile",
+        "iOS",
+        "Android",
+        "Kotlin",
+        "React Native"
+      ],
       "links": [
         {
           "text": "Download App",
@@ -59,7 +65,12 @@
         "Product Manager",
         "Developer"
       ],
-      "status": "Live",
+      "keywords": [
+        "Web",
+        "React",
+        "Next.js",
+        "Open-source"
+      ],
       "links": [
         {
           "text": "Visit",
@@ -82,7 +93,11 @@
         "Product Manager",
         "Developer"
       ],
-      "status": "Live",
+      "keywords": [
+        "Web",
+        "React",
+        "Node.js"
+      ],
       "links": [
         {
           "text": "Visit",
@@ -100,7 +115,12 @@
         "Product Manager",
         "Developer"
       ],
-      "status": "Live",
+      "keywords": [
+        "Web",
+        "React",
+        "Next.js",
+        "Open-source"
+      ],
       "links": [
         {
           "text": "Visit",
@@ -123,7 +143,11 @@
         "Product Manager",
         "Developer"
       ],
-      "status": "Dead",
+      "keywords": [
+        "Mobile",
+        "Android",
+        "Kotlin"
+      ],
       "links": [],
       "testimonials": [
         {
@@ -140,7 +164,12 @@
         "Product Manager",
         "Developer"
       ],
-      "status": "Dead",
+      "keywords": [
+        "Mobile",
+        "Android",
+        "Kotlin",
+        "Open-source"
+      ],
       "links": [
         {
           "text": "Download App",
@@ -159,18 +188,6 @@
           "text": "This app is awesome..."
         }
       ]
-    },
-    {
-      "slug": "relish",
-      "title": "Relish Mobile App",
-      "summary": "This is a quick summary of Awesome Example App",
-      "roles": [
-        "Product Manager",
-        "Developer"
-      ],
-      "status": "Dead",
-      "links": [],
-      "testimonials": []
     }
   ],
   "highlights": [

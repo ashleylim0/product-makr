@@ -13,6 +13,16 @@
     background-color: #D5EDFB;
 }
 
+.ui.label.keyword-label {
+    color: #da6e50;
+    background-color: #fdd1c5;
+}
+
+.ui.label.status-label {
+    color: #3AC2A5;
+    background-color: #d5f5ea;
+}
+
 .footer-text {
     color: #707988;
     font-size: 1.33em;
