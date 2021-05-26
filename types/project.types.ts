@@ -2,8 +2,9 @@ export interface Project {
     slug: string,
     title: string,
     summary: string,
+    shareImageUrl: string,
     roles: [string],
-    status: string,
+    keywords: [string],
     links: [{
         text: string,
         url: string,

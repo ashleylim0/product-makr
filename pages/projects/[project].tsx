@@ -1,6 +1,9 @@
 import {
+  Card,
   Grid,
-  Container
+  Container,
+  Icon,
+  Label
 } from 'semantic-ui-react';
 import fs from 'fs';
 import path from 'path';
@@ -39,6 +42,44 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
             <Grid.Row style={{ padding: '0.5em' }}>
               <Grid.Column>
                 <p>{myProject.title}</p>
+                <Card
+                  key={myProject.slug}
+                  fluid
+                  style={{ boxShadow: '0 0 30px 0 rgb(0 0 0 / 12%)', borderRadius: '8px', padding: '12px', marginTop: '30px' }}>
+                  <Card.Content textAlign='left'>
+                    <div>
+                      <h2 className='card-title' style={{ margin: '0 0 16px 0', display: 'inline' }}>{myProject.title}</h2>
+                    </div>
+                    <p style={{ marginTop: '8px' }} className='tagline'>
+                      {myProject.summary
+                        ? myProject.summary : null}
+                    </p>
+                    {myProject.roles && myProject.roles.length > 0
+                      ?
+                      myProject.roles.map((role: string, key) =>
+                        <Label
+                          key={key}
+                          size='large'
+                          className='role-label'
+                          style={{ display: 'inline-block', margin: '0.2em 0.4em 0.4em 0', padding: '0.5em' }}>
+                          {role}
+                        </Label>)
+                      : null}
+                    {myProject.keywords && myProject.keywords.length > 0
+                      ?
+                      <div>
+                        {myProject.keywords.map((keyword: string, key) =>
+                          <Label
+                            key={key}
+                            size='large'
+                            className='keyword-label'
+                            style={{ display: 'inline-block', margin: '0.2em 0.4em 0.4em 0', padding: '0.5em' }}>
+                            {keyword}
+                          </Label>)}
+                      </div>
+                      : null}
+                  </Card.Content>
+                </Card >
                 <ReactMarkdown children={mdContent} />
               </Grid.Column>
             </Grid.Row>
