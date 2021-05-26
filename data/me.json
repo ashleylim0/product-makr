@@ -201,25 +201,29 @@
       "slug": "custom-product-case",
       "title": "Custom Product Case",
       "summary": "This is a custom case write-up with Markdown",
-      "url": "/highlights/custom-product-case"
+      "url": "/highlights/custom-product-case",
+      "shareImageUrl": ""
     },
     {
       "slug": "case-study-peloton-in-app-social-community",
       "title": "Case Study: Peloton In-app Social Community",
       "summary": "This is a quick summary of Awesome Case Study",
-      "url": "https://rede.io/case-study-peloton-in-app-social-community/"
+      "url": "https://rede.io/case-study-peloton-in-app-social-community/",
+      "shareImageUrl": ""
     },
     {
       "slug": "what-is-a-good-product-manager-to-peers",
       "title": "What is a Good Product Manager to Peers?",
       "summary": "Some takeaways on what a good product manager is to peers.",
-      "url": "https://rede.io/what-is-a-good-product-manager-to-peers/"
+      "url": "https://rede.io/what-is-a-good-product-manager-to-peers/",
+      "shareImageUrl": ""
     },
     {
       "slug": "product-manager-cover-letter",
       "title": "Career Journey: PM Cover Letter",
       "summary": "My cover letter for my non-traditional career journey of teaching myself to code and building products people love.",
-      "url": "https://rede.io/product-manager-cover-letter/"
+      "url": "https://rede.io/product-manager-cover-letter/",
+      "shareImageUrl": ""
     }
   ],
   "endorsements": [

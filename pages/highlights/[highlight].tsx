@@ -22,13 +22,16 @@ export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent 
   mdContent: any
 }) {
 
+  const shareImage = myHighlight.shareImageUrl ? `${process.env.PUBLIC_URL}${myHighlight.shareImageUrl}` : '/share.png'
+
   //TODO revisit, load markdown files properly & get data for initial props
   return (
     <div>
       <Meta
         title={`${myHighlight.title} | ${portfolio.name}`}
         desc={`${myHighlight.summary}`}
-        canonical={`${process.env.PUBLIC_URL}/highlights/${myHighlight.slug}`} />
+        canonical={`${process.env.PUBLIC_URL}/highlights/${myHighlight.slug}`}
+        image={shareImage} />
 
       <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '2.2em 0' }}>
