@@ -8,7 +8,7 @@ async function generateOgImage() {
   const portfolio = JSON.parse(fileContents);
 
   //Load name, title, and image background color from portfolio json file
-  const name = portfolio.name ? portfolio.name : "Product";
+  const name = portfolio.name ? portfolio.name : "My";
   const title = portfolio.title ? portfolio.title : "Portfolio"
 
   // dimension of our image
