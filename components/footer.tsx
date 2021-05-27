@@ -24,11 +24,13 @@ export default function Footer({ portfolio }: {
             </p>
             : null
           }
-          <a
-            style={{ fontSize: '1.1em' }}
-            className='card-link'
-            href='https://product.makr.io' target='_blank' rel="noopener">
-            <b>Makr Built 🖤</b></a>
+          {portfolio.theme.makrCredit ?
+            <a
+              style={{ fontSize: '1.1em' }}
+              className='card-link'
+              href='https://product.makr.io' target='_blank' rel="noopener">
+              <b>Makr Built 🖤</b></a> : null
+          }
         </Container>
       </Segment>
     </footer>

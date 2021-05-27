@@ -11,6 +11,7 @@ module.exports = {
         })
         if (isServer) {
             require('./util/generateSiteMap')
+            require('./util/generateOgImage')
         }
         return config
     }

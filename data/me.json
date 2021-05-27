@@ -2,7 +2,7 @@
   "name": "René DeAnda",
   "email": "rene@deanda.org",
   "title": "Product Manager",
-  "summary": "I'm a jack of all trades, master of none. I love to learn new things by reading, asking lots of questions, and building new things that help others. Welcome!",
+  "summary": "I'm a jack of all trades, master of none. I love to learn new things by [reading](https://goodreads.com/renedeanda), asking lots of questions, and building new things that help others. I also love [photography](https://unsplash.com/@renedeanda). Welcome!",
   "blog": "https://rede.io",
   "podcast": "https://soundcloud.com/delightfultoday",
   "resume": "https://rene.makr.io/resume.pdf",
@@ -29,20 +29,26 @@
   "projects": [
     {
       "slug": "delightful",
-      "title": "Delightful Mobile App",
-      "summary": "This is a quick summary of Awesome Example App",
-      "role": "Product Manager, Designer, Developer etc",
-      "status": "Live",
+      "title": "Delightful Gratitude Journal App",
+      "summary": "The Delightful mobile app is a lightweight gratitude journal for Android & iOS to record 3 good things from your day. Delightful was built with privacy in mind. The app includes backup, prompts, themes, & daily reminders.",
+      "shareImageUrl": "/images/projects/delightful/share.jpg",
+      "roles": [
+        "Product Manager",
+        "Designer",
+        "Developer"
+      ],
+      "keywords": [
+        "Mobile",
+        "iOS",
+        "Android",
+        "Kotlin",
+        "React Native"
+      ],
       "links": [
         {
-          "text": "Download app | View website | Read case study | etc",
+          "text": "Download App",
           "url": "https://delightfuljournal.com",
-          "icon": ""
-        },
-        {
-          "text": "Get source code",
-          "url": "https://github.com/USERNAME/REPO-NAME",
-          "icon": ""
+          "icon": "external"
         }
       ],
       "testimonials": [
@@ -53,12 +59,135 @@
       ]
     },
     {
-      "slug": "project-slug",
+      "slug": "vina-dev",
+      "title": "Vina.Dev",
+      "summary": "Mobile optimized portfolio pages for developers to build their personal brands & find opportunity.",
+      "shareImageUrl": "/images/projects/vina-dev/share.jpg",
+      "roles": [
+        "Product Manager",
+        "Developer"
+      ],
+      "keywords": [
+        "Web",
+        "React",
+        "Node.js"
+      ],
+      "links": [
+        {
+          "text": "Visit",
+          "url": "https://vina.dev/rene",
+          "icon": "external"
+        }
+      ],
+      "testimonials": []
+    },
+    {
+      "slug": "tech-viet",
+      "title": "Tech Viet - A View into Vietnam Tech",
+      "summary": "Vietnam Tech Ecosystem open-sourced. Tech Viet is an open-source website built with React & Next.js listing 200 technology companies in Vietnam.",
+      "shareImageUrl": "/images/projects/tech-viet/share.jpg",
+      "roles": [
+        "Product Manager",
+        "Developer"
+      ],
+      "keywords": [
+        "Web",
+        "React",
+        "Next.js",
+        "Open-source"
+      ],
+      "links": [
+        {
+          "text": "Visit",
+          "url": "https://tech.viet.io",
+          "icon": "external"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/renedeanda/tech.viet",
+          "icon": "github"
+        }
+      ],
+      "testimonials": []
+    },
+    {
+      "slug": "product-makr",
+      "title": "Product Makr: Open-source Product Manager Portfolios",
+      "summary": "Open-source project to help Product Managers make portfolio pages and improve their job hunt.",
+      "shareImageUrl": "/images/projects/product-makr/share.jpg",
+      "roles": [
+        "Product Manager",
+        "Developer"
+      ],
+      "keywords": [
+        "Web",
+        "React",
+        "Next.js",
+        "Open-source"
+      ],
+      "links": [
+        {
+          "text": "Visit",
+          "url": "https://product.makr.io",
+          "icon": "external"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/renedeanda/product-makr",
+          "icon": "github"
+        }
+      ],
+      "testimonials": []
+    },
+    {
+      "slug": "blissful",
       "title": "Blissful Mobile App",
       "summary": "This is a quick summary of Awesome Example App",
-      "role": "Product Manager, Designer, Developer etc",
-      "status": "Dead",
+      "shareImageUrl": "/images/projects/blissful/share.jpg",
+      "roles": [
+        "Product Manager",
+        "Developer"
+      ],
+      "keywords": [
+        "Mobile",
+        "Android",
+        "Kotlin"
+      ],
       "links": [],
+      "testimonials": [
+        {
+          "name": "Jane Smith",
+          "text": "This app is awesome..."
+        }
+      ]
+    },
+    {
+      "slug": "adnotes",
+      "title": "AdNotes Mobile App",
+      "summary": "This is a quick summary of Awesome Example App",
+      "shareImageUrl": "/images/projects/adnotes/share.jpg",
+      "roles": [
+        "Product Manager",
+        "Developer"
+      ],
+      "keywords": [
+        "Mobile",
+        "Android",
+        "Kotlin",
+        "Open-source"
+      ],
+      "links": [
+        {
+          "text": "Download App",
+          "url": "https://play.google.com/store/apps/details?id=com.dcrtns.adnotebook",
+          "icon": "google play"
+        },
+        {
+          "text": "GitHub",
+          "url": "https://github.com/renedeanda/AdNotes",
+          "icon": "github"
+        }
+      ],
       "testimonials": [
         {
           "name": "Jane Smith",
@@ -67,12 +196,34 @@
       ]
     }
   ],
-  "cases": [
+  "highlights": [
     {
-      "slug": "case-slug",
-      "title": "Awesome Case Study OR Blog Post Title",
+      "slug": "custom-product-case",
+      "title": "Custom Product Case",
+      "summary": "This is a custom case write-up with Markdown",
+      "url": "/highlights/custom-product-case",
+      "shareImageUrl": ""
+    },
+    {
+      "slug": "case-study-peloton-in-app-social-community",
+      "title": "Case Study: Peloton In-app Social Community",
       "summary": "This is a quick summary of Awesome Case Study",
-      "url": "Link to blog post OR /case-slug-NO-SPACES (Markdown file)"
+      "url": "https://rede.io/case-study-peloton-in-app-social-community/",
+      "shareImageUrl": ""
+    },
+    {
+      "slug": "what-is-a-good-product-manager-to-peers",
+      "title": "What is a Good Product Manager to Peers?",
+      "summary": "Some takeaways on what a good product manager is to peers.",
+      "url": "https://rede.io/what-is-a-good-product-manager-to-peers/",
+      "shareImageUrl": ""
+    },
+    {
+      "slug": "product-manager-cover-letter",
+      "title": "Career Journey: PM Cover Letter",
+      "summary": "My cover letter for my non-traditional career journey of teaching myself to code and building products people love.",
+      "url": "https://rede.io/product-manager-cover-letter/",
+      "shareImageUrl": ""
     }
   ],
   "endorsements": [
@@ -108,6 +259,7 @@
   "theme": {
     "accentColor": "red | blue | green | purple",
     "emoji": "🔭",
-    "quote": "\"Be yourself; everyone else is already taken.\" - Oscar Wilde"
+    "quote": "\"Be yourself; everyone else is already taken.\" - Oscar Wilde",
+    "makrCredit": true
   }
 }

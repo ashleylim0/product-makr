@@ -11,30 +11,19 @@ import Page from '../../components/page';
 import Meta from '../../components/Meta';
 import { Portfolio } from '../../types/portfolio.types';
 import { GetStaticProps } from 'next';
+import HighlightsContainer from '../../components/highlightsListContainer';
 
-export default function Cases({ portfolio }: { portfolio: Portfolio }) {
+export default function Highlights({ portfolio }: { portfolio: Portfolio }) {
 
   return (
     <div>
       <Meta
-        title={`Case Studies | ${portfolio.name}`}
-        desc={portfolio.summary}
-        canonical={`${process.env.PUBLIC_URL}/cases`} />
+        title={`Highlights | ${portfolio.name}`}
+        desc={`${portfolio.name}'s Blog & Case Highlights`}
+        canonical={`${process.env.PUBLIC_URL}/highlights`} />
 
       <Page portfolio={portfolio}>
-        <Container style={{ width: '100vw', margin: '3em 0' }}>
-          <Grid
-            container
-            stackable
-            textAlign='center'
-            verticalAlign='middle'>
-            <Grid.Row style={{ padding: '0.5em' }}>
-              <Grid.Column>
-
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
+        <HighlightsContainer highlights={portfolio.highlights} />
       </Page>
     </div >
   )

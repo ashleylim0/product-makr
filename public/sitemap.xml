@@ -10,19 +10,39 @@
                       </url>
                   
                       <url>
-                          <loc>https://rene.makr.io/cases</loc>
-                      </url>
-                  
-                      <url>
                           <loc>https://rene.makr.io/projects</loc>
                       </url>
                   
                       <url>
-                          <loc>https://rene.makr.io/cases/case-slug</loc>
+                          <loc>https://rene.makr.io/highlights</loc>
                       </url>
                   
                       <url>
-                          <loc>https://rene.makr.io/projects/project-slug</loc>
+                          <loc>https://rene.makr.io/highlights/custom-product-case</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://rene.makr.io/projects/delightful</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://rene.makr.io/projects/vina-dev</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://rene.makr.io/projects/tech-viet</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://rene.makr.io/projects/product-makr</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://rene.makr.io/projects/blissful</loc>
+                      </url>
+                  
+                      <url>
+                          <loc>https://rene.makr.io/projects/adnotes</loc>
                       </url>
                   
       </urlset>

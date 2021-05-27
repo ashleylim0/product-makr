@@ -8,6 +8,21 @@
     /* Gecko Browsers */
 }
 
+.ui.label.role-label {
+    color: #658595;
+    background-color: #D5EDFB;
+}
+
+.ui.label.keyword-label {
+    color: #da6e50;
+    background-color: #fdd1c5;
+}
+
+.ui.label.status-label {
+    color: #3AC2A5;
+    background-color: #d5f5ea;
+}
+
 .footer-text {
     color: #707988;
     font-size: 1.33em;
@@ -28,7 +43,9 @@
 }
 
 .Navbar {
-    background-color: #F9FAFD;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background-color: #FFFFFF80;
     text-transform: uppercase;
     height: 56px;
     width: 100%;
@@ -67,19 +84,18 @@
 .card-title {
     color: #1A202C;
     position: 'relative';
-    font-size: 1.5em;
+    font-size: 1.8em;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
     /* number of lines to show */
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
 .card-image-header {
     z-index: 1;
     position: relative;
-    border-radius: 4px 4px 0 0;
+    border-radius: 8px;
     padding: 0;
     margin: 0;
     object-fit: cover;
@@ -87,9 +103,14 @@
 }
 
 .tagline {
+    font-size: 1.22em;
     color: #555B66;
     text-overflow: ellipsis;
     display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* number of lines to show */
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
 }
 

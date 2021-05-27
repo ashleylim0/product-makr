@@ -11,6 +11,7 @@ import Page from '../../components/page';
 import Meta from '../../components/Meta';
 import { Portfolio } from '../../types/portfolio.types';
 import { GetStaticProps } from 'next';
+import ProjectsContainer from '../../components/projectsListContainer';
 
 export default function Projects({ portfolio }: { portfolio: Portfolio }) {
 
@@ -18,23 +19,11 @@ export default function Projects({ portfolio }: { portfolio: Portfolio }) {
     <div>
       <Meta
         title={`Projects | ${portfolio.name}`}
-        desc={portfolio.summary}
+        desc={`${portfolio.name}'s Product Projects`}
         canonical={`${process.env.PUBLIC_URL}/projects`} />
 
       <Page portfolio={portfolio}>
-        <Container style={{ width: '100vw', margin: '3em 0' }}>
-          <Grid
-            container
-            stackable
-            textAlign='center'
-            verticalAlign='middle'>
-            <Grid.Row style={{ padding: '0.5em' }}>
-              <Grid.Column>
-
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Container>
+        <ProjectsContainer projects={portfolio.projects} />
       </Page>
     </div >
   )

@@ -12,7 +12,7 @@ export default function EndorsementItem({ endorsement }: {
           <p style={{ fontSize: '1.33em' }} className='tagline'>
             {endorsement.text}
           </p>
-          <p style={{ color: '#959595', fontStyle: 'italic', fontSize: '1.33em' }}>- {endorsement.name}</p>
+          <p style={{ color: '#959595', fontStyle: 'italic', fontSize: '1.33em' }}>— {endorsement.name}</p>
         </Card.Content> : null}
       </Card >
     </div>

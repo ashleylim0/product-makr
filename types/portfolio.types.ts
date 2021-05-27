@@ -1,3 +1,6 @@
+import { Highlight } from "./highlight.types";
+import { Project } from "./project.types";
+
 export interface Portfolio {
     name: string,
     email: string,
@@ -12,28 +15,8 @@ export interface Portfolio {
         url: string,
         icon: string
     }],
-    projects: [{
-        slug: string,
-        title: string,
-        summary: string,
-        role: string,
-        status: string,
-        links: [{
-            text: string,
-            url: string,
-            icon: string
-        }],
-        testimonials: [{
-            name: string,
-            text: string
-        }]
-    }],
-    cases: [{
-        slug: string,
-        title: string,
-        summary: string,
-        url: string
-    }],
+    projects: [project: Project],
+    highlights: [highlight: Highlight],
     endorsements: [
         {
             name: string,
@@ -43,6 +26,7 @@ export interface Portfolio {
     theme: {
         accentColor: string,
         emoji: string,
-        quote: string
+        quote: string,
+        makrCredit: boolean
     }
 }

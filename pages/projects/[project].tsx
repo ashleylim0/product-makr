@@ -1,6 +1,9 @@
 import {
+  Card,
   Grid,
-  Container
+  Container,
+  Icon,
+  Label
 } from 'semantic-ui-react';
 import fs from 'fs';
 import path from 'path';
@@ -20,17 +23,21 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
   mdContent: any
 }) {
 
+  const shareImage = myProject.shareImageUrl ? `${process.env.PUBLIC_URL}${myProject.shareImageUrl}` : '/share.png'
+
   //TODO revisit, load markdown files properly & get data for initial props
   return (
     <div>
       <Meta
         title={`${myProject.title} | ${portfolio.name}`}
         desc={`${myProject.summary}`}
-        canonical={`${process.env.PUBLIC_URL}/projects/${myProject.slug}`} />
+        canonical={`${process.env.PUBLIC_URL}/projects/${myProject.slug}`}
+        image={shareImage} />
 
       <Page portfolio={portfolio}>
-        <Container style={{ width: '100vw', margin: '3em 0' }}>
+        <Container style={{ width: '100vw', margin: '2.2em 0' }}>
           <Grid
+            style={{ padding: '1.5em 1em 1.5em', }}
             container
             stackable
             textAlign='center'
@@ -38,6 +45,44 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
             <Grid.Row style={{ padding: '0.5em' }}>
               <Grid.Column>
                 <p>{myProject.title}</p>
+                <Card
+                  key={myProject.slug}
+                  fluid
+                  style={{ boxShadow: '0 0 30px 0 rgb(0 0 0 / 12%)', borderRadius: '8px', padding: '12px', marginTop: '30px' }}>
+                  <Card.Content textAlign='left'>
+                    <div>
+                      <h2 className='card-title' style={{ margin: '0 0 16px 0', display: 'inline' }}>{myProject.title}</h2>
+                    </div>
+                    <p style={{ marginTop: '8px' }} className='tagline'>
+                      {myProject.summary
+                        ? myProject.summary : null}
+                    </p>
+                    {myProject.roles && myProject.roles.length > 0
+                      ?
+                      myProject.roles.map((role: string, key) =>
+                        <Label
+                          key={key}
+                          size='large'
+                          className='role-label'
+                          style={{ display: 'inline-block', margin: '0.2em 0.4em 0.4em 0', padding: '0.5em' }}>
+                          {role}
+                        </Label>)
+                      : null}
+                    {myProject.keywords && myProject.keywords.length > 0
+                      ?
+                      <div>
+                        {myProject.keywords.map((keyword: string, key) =>
+                          <Label
+                            key={key}
+                            size='large'
+                            className='keyword-label'
+                            style={{ display: 'inline-block', margin: '0.2em 0.4em 0.4em 0', padding: '0.5em' }}>
+                            {keyword}
+                          </Label>)}
+                      </div>
+                      : null}
+                  </Card.Content>
+                </Card >
                 <ReactMarkdown children={mdContent} />
               </Grid.Column>
             </Grid.Row>
@@ -49,44 +94,56 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const projectsDirectory = path.join(process.cwd(), '/data/md/projects')
-  const filenames = fs.readdirSync(projectsDirectory)
+  const dataDirectory = path.join(process.cwd(), '/data');
+  const filename = 'me.json';
 
-  const paths = filenames.map((filename) => {
-    const slug = filename.replace(/\.md$/, '')
+  const filePath = path.join(dataDirectory, filename);
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const portfolio = JSON.parse(fileContents);
+
+  const paths = portfolio.projects.map((project: Project) => {
     return {
       params: {
-        project: slug
+        project: project.slug
       }
     }
-  })
+  });
+
+
   return { paths, fallback: false }
 }
 
 
 export const getStaticProps: GetStaticProps = async context => {
-  const projectName = context.params.project
-  const dataDirectory = path.join(process.cwd(), '/data')
-  const filename = 'me.json'
+  const projectName = context.params.project;
+  const dataDirectory = path.join(process.cwd(), '/data');
+  const filename = 'me.json';
 
-  const filePath = path.join(dataDirectory, filename)
-  const fileContents = fs.readFileSync(filePath, 'utf8')
-  const portfolio = JSON.parse(fileContents)
+  const filePath = path.join(dataDirectory, filename);
+  const fileContents = fs.readFileSync(filePath, 'utf8');
+  const portfolio = JSON.parse(fileContents);
 
-  //Load specific case from me.json
-  const myProject = portfolio.projects.find((currentProject: Project) => currentProject.slug == projectName)
+  //Load specific project from me.json
+  const myProject = portfolio.projects.find((currentProject: Project) => currentProject.slug == projectName);
 
-  //Load specific case markdown file
-  const projectFile = path.join(process.cwd(), `/data/md/projects/${projectName}.md`)
-  const projectFileContents = fs.readFileSync(projectFile, 'utf8')
-  const { data, content } = matter(projectFileContents)
+  //Load specific project markdown file
+  const projectFilePath = path.join(process.cwd(), `/data/md/projects/${projectName}.md`);
+  let projectFileContents = null;
+  let mdData = null;
+  let mdContent = null;
+  if (fs.existsSync(projectFilePath)) {
+    projectFileContents = fs.readFileSync(projectFilePath, 'utf8');
+    const { data, content } = matter(projectFileContents);
+    mdData = data;
+    mdContent = content;
+  }
 
   return {
     props: {
       portfolio,
       myProject,
-      mdData: data,
-      mdContent: content
+      mdData: mdData,
+      mdContent: mdContent
     }
   }
 }
