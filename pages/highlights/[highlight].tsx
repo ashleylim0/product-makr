@@ -2,8 +2,7 @@ import {
   Card,
   Grid,
   Container,
-  Label,
-  Icon
+  Header
 } from 'semantic-ui-react';
 import fs from 'fs';
 import path from 'path';
@@ -36,10 +35,9 @@ export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent 
       <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '2.2em 0' }}>
           <Grid
-            style={{ padding: '1.5em 1em 1.5em', }}
-            container
+            style={{ padding: '1.5em 1em 3.5em' }}
+            centered
             stackable
-            textAlign='center'
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '0.5em' }}>
               <Grid.Column>
@@ -56,9 +54,17 @@ export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent 
                         ? myHighlight.summary : null}
                     </p>
                   </Card.Content>
-                </Card >
-                <p>{myHighlight.title}</p>
-                <ReactMarkdown children={mdContent} />
+                </Card>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row style={{ padding: '1em 0.5em 2em' }}>
+              <Grid.Column width='9'>
+                <Header style={{ color: '#212121', padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  {myHighlight.title}
+                </Header>
+                <div style={{ fontSize: '2.2em' }} >
+                  <ReactMarkdown children={mdContent} linkTarget="_blank" />
+                </div>
               </Grid.Column>
             </Grid.Row>
           </Grid>

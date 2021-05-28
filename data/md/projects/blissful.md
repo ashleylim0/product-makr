@@ -4,9 +4,6 @@ author:
   name: 'Jane Smith'
   picture: '/images/about/me.jpeg'
 date: '2021-01-01'
-coverImage: '/images/projects/project-slug/cover.jpg'
-ogImage:
-  url: '/images/projects/project-slug/cover.jpg'
 ---
 
 I **love** making stuff.

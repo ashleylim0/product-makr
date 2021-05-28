@@ -1,12 +1,9 @@
 ---
-title: 'About Template'
+title: 'About Me'
 author:
-  name: 'Jane Smith'
+  name: 'René DeAnda'
   picture: '/images/about/me.jpeg'
-date: '2021-01-01'
-coverImage: '/images/about/cover.jpg'
-ogImage:
-  url: '/images/about/cover.jpg'
+date: '2021-05-27'
 ---
 
 I **love** making stuff.
