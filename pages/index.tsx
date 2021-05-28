@@ -31,10 +31,9 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
       <Page portfolio={portfolio}>
         <Container style={{ width: '100vw', margin: '2.2em 0' }}>
           <Grid
-            style={{ padding: '1.5em 1em 1.5em', }}
+            style={{ padding: '1.5em 1em 3.5em', }}
             centered
             stackable
-            textAlign='center'
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '1em 0.5em 2em' }}>
               <Grid.Column width='9'>
