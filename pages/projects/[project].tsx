@@ -42,7 +42,7 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
             stackable
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '0.5em' }}>
-              <Grid.Column>
+              <Grid.Column width='9'>
                 <Card
                   key={myProject.slug}
                   fluid
