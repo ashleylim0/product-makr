@@ -40,7 +40,7 @@ export default function About({ portfolio, summary, mdData, mdContent }: {
                 <Header style={{ color: '#212121', padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                   About Me
                 </Header>
-                <div style={{ fontSize: '2.2em' }} >
+                <div style={{ fontSize: '1.8em' }} >
                   <ReactMarkdown children={mdContent} linkTarget="_blank" />
                 </div>
               </Grid.Column>
@@ -61,7 +61,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const portfolio = JSON.parse(fileContents)
 
   //Load about markdown file
-  const aboutFile = path.join(process.cwd(), `/data/md/about.md`)
+  const aboutFile = path.join(process.cwd(), `/data/md/about/about.md`)
   const aboutFileContents = fs.readFileSync(aboutFile, 'utf8')
   const { data, content } = matter(aboutFileContents)
 
