@@ -9,6 +9,7 @@ import Page from '../components/page';
 import Meta from '../components/Meta';
 import { Portfolio } from '../types/portfolio.types';
 import { GetStaticProps } from 'next';
+import Image from 'next/image';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import remark from 'remark';
@@ -37,10 +38,18 @@ export default function About({ portfolio, summary, mdData, mdContent }: {
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '1em 0.5em 2em' }}>
               <Grid.Column width='9'>
+                {mdData.author && mdData.author.picture ?
+                  <Image
+                    alt={mdData.author.name ? mdData.author.name : "Author picture"}
+                    height={320}
+                    width={320}
+                    src={mdData.author.picture}
+                    className='card-image-header'
+                  /> : null}
                 <Header style={{ color: '#212121', padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
-                  About Me
+                  {mdData.title ? mdData.title : "About Me"}
                 </Header>
-                <div style={{ fontSize: '1.8em' }} >
+                <div style={{ fontSize: '2.2em' }} >
                   <ReactMarkdown children={mdContent} linkTarget="_blank" />
                 </div>
               </Grid.Column>
