@@ -36,9 +36,7 @@ export default function ProjectCard({ project }: {
             project.roles.map((role: string, key) =>
               <Label
                 key={key}
-                size='large'
-                className='role-label'
-                style={{ display: 'inline-block', margin: '0.2em 0.4em 0.4em 0', padding: '0.5em' }}>
+                className='role-label'>
                 {role}
               </Label>)
             : null}

@@ -1,5 +1,4 @@
 import {
-  Card,
   Grid,
   Container,
   Header,
@@ -11,11 +10,12 @@ import Page from '../../components/page';
 import Meta from '../../components/Meta';
 import { Portfolio } from '../../types/portfolio.types';
 import { GetStaticProps, GetStaticPaths } from 'next';
+import Image from 'next/image';
 import { Project } from '../../types/project.types';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
+import EndorsementItem from '../../components/endorsementItem';
 
-//TODO change case reference to project because copy & pasted
 export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
   portfolio: Portfolio,
   myProject: Project,
@@ -25,7 +25,6 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
 
   const shareImage = myProject.shareImageUrl ? `${process.env.PUBLIC_URL}${myProject.shareImageUrl}` : '/share.png'
 
-  //TODO revisit, load markdown files properly & get data for initial props
   return (
     <div>
       <Meta
@@ -41,62 +40,67 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
             centered
             stackable
             verticalAlign='middle'>
-            <Grid.Row style={{ padding: '0.5em' }}>
-              <Grid.Column width='9'>
-                <Card
-                  key={myProject.slug}
-                  fluid
-                  style={{ boxShadow: '0 0 30px 0 rgb(0 0 0 / 12%)', borderRadius: '8px', padding: '12px', marginTop: '30px' }}>
-                  <Card.Content textAlign='left'>
-                    <div>
-                      <h2 className='card-title' style={{ margin: '0 0 16px 0', display: 'inline' }}>{myProject.title}</h2>
-                    </div>
-                    <p style={{ marginTop: '8px' }} className='tagline'>
-                      {myProject.summary
-                        ? myProject.summary : null}
-                    </p>
-                    {myProject.roles && myProject.roles.length > 0
-                      ?
-                      myProject.roles.map((role: string, key) =>
-                        <Label
-                          key={key}
-                          size='large'
-                          className='role-label'
-                          style={{ display: 'inline-block', margin: '0.2em 0.4em 0.4em 0', padding: '0.5em' }}>
-                          {role}
-                        </Label>)
-                      : null}
-                    {myProject.keywords && myProject.keywords.length > 0
-                      ?
-                      <div>
-                        {myProject.keywords.map((keyword: string, key) =>
-                          <Label
-                            key={key}
-                            size='large'
-                            className='keyword-label'
-                            style={{ display: 'inline-block', margin: '0.2em 0.4em 0.4em 0', padding: '0.5em' }}>
-                            {keyword}
-                          </Label>)}
-                      </div>
-                      : null}
-                  </Card.Content>
-                </Card>
-              </Grid.Column>
-            </Grid.Row>
             <Grid.Row style={{ padding: '1em 0.5em 2em' }}>
               <Grid.Column width='9'>
+                {myProject.shareImageUrl ?
+                  <Image
+                    alt={myProject.title}
+                    height={360}
+                    width={800}
+                    src={myProject.shareImageUrl}
+                    className='card-image-header'
+                  /> : null}
                 <Header style={{ color: '#212121', padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                   {myProject.title}
                 </Header>
-                <div style={{ fontSize: '2.2em' }} >
-                  <ReactMarkdown children={mdContent} linkTarget="_blank" />
-                </div>
+                {myProject.roles && myProject.roles.length > 0
+                  ?
+                  myProject.roles.map((role: string, key) =>
+                    <Label
+                      key={key}
+                      className='role-label'>
+                      {role}
+                    </Label>)
+                  : null}
+                {myProject.keywords && myProject.keywords.length > 0
+                  ?
+                  <div>
+                    {myProject.keywords.map((keyword: string, key) =>
+                      <Label
+                        key={key}
+                        className='keyword-label'>
+                        {keyword}
+                      </Label>)}
+                  </div>
+                  : null}
+                <p style={{ fontSize: '2.2em', marginTop: '8px' }}>
+                  {myProject.summary
+                    ? myProject.summary : null}
+                </p>
               </Grid.Column>
             </Grid.Row>
+            {myProject.testimonials && myProject.testimonials.length > 0 ?
+              <Grid.Row style={{ padding: '1em 0 2em' }}>
+                <Grid.Column width='9'>
+                  <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                    Testimonials
+                </Header>
+                  {myProject.testimonials.map((endorsement: any) =>
+                    <EndorsementItem key={endorsement.name} endorsement={endorsement} />)}
+                </Grid.Column>
+              </Grid.Row> : null}
+            {mdContent ?
+              <Grid.Row style={{ padding: '1em 0 2em' }}>
+                <Grid.Column width='9'>
+                  <div style={{ fontSize: '2.2em' }}>
+                    <ReactMarkdown children={mdContent} linkTarget="_blank" />
+                  </div>
+                </Grid.Column>
+              </Grid.Row> : null}
           </Grid>
         </Container>
       </Page>
-    </div >
+    </div>
   )
 }
 
