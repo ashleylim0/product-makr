@@ -9,18 +9,31 @@
 }
 
 .ui.label.role-label {
+    display: inline-block;
+    font-size: 1.22em;
+    margin: 0.2em 0.4em 0.4em 0;
+    padding: 0.5em;
+    color: #C58555;
+    background-color: #FCF5E5;
+}
+
+.ui.label.label-1 {
     color: #658595;
     background-color: #D5EDFB;
 }
 
-.ui.label.keyword-label {
+.ui.label.label-2 {
     color: #da6e50;
     background-color: #fdd1c5;
 }
 
-.ui.label.status-label {
-    color: #3AC2A5;
-    background-color: #d5f5ea;
+.ui.label.keyword-label {
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 0.2em 0.4em 0.4em 0;
+    padding: 0.5em;
+    color: #1acaae;
+    background-color: #dffff5;
 }
 
 .footer-text {
@@ -92,6 +105,11 @@
     -webkit-box-orient: vertical;
 }
 
+.card-title:hover {
+    color: #0C5FFF;
+    font-size: 1.8em;
+}
+
 .card-image-header {
     z-index: 1;
     position: relative;
@@ -103,7 +121,7 @@
 }
 
 .tagline {
-    font-size: 1.22em;
+    font-size: 1.5em;
     color: #555B66;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -112,6 +130,11 @@
     /* number of lines to show */
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
+}
+
+.endorsement-text {
+    font-size: 1.33em;
+    color: #555B66;
 }
 
 .sidebar-text {

@@ -15,12 +15,14 @@ export default function ShareMenu({ url }: { url: string }) {
       <Dropdown.Menu>
         <Dropdown.Item
           as='a'
+          rel='noopener'
           href={`mailto:?subject=Product Makr&body=Check this out: ${url}`}
           target="_blank"
           icon={{ name: 'mail' }}
           text='Share by Email' />
         <Dropdown.Item
           as='a'
+          rel='noopener'
           href={`https://twitter.com/intent/tweet/?text=Check this out&url=${url}&via=redeio`}
           target="_blank"
           icon={{ name: 'twitter' }}

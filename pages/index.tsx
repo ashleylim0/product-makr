@@ -2,7 +2,8 @@ import {
   Button,
   Grid,
   Header,
-  Container
+  Container,
+  Icon
 } from 'semantic-ui-react';
 import ReactMarkdown from 'react-markdown';
 import remark from 'remark';
@@ -46,6 +47,16 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                 <div style={{ fontSize: '2.2em' }} >
                   <ReactMarkdown children={portfolio.summary} linkTarget="_blank" />
                 </div>
+                <Link href='/about' passHref>
+                  <Button
+                    as='a'
+                    rel='noopener'
+                    size='big'
+                    color='black'
+                    style={{ marginTop: '24px' }}
+                    fluid
+                  >Read More<Icon name='arrow right' /></Button>
+                </Link>
               </Grid.Column>
             </Grid.Row>
             {portfolio.projects && portfolio.projects.length > 0 ?
@@ -60,10 +71,12 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                     <Link href='/projects' passHref>
                       <Button
                         as='a'
+                        rel='noopener'
+                        size='big'
                         color='black'
                         style={{ marginTop: '24px' }}
                         fluid
-                      >View All Projects</Button>
+                      >View All Projects<Icon name='arrow right' /></Button>
                     </Link>
                     : null}
 
@@ -84,24 +97,27 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                     <Link href='/highlights' passHref>
                       <Button
                         as='a'
+                        rel='noopener'
+                        size='big'
                         color='black'
                         style={{ marginTop: '24px' }}
                         fluid
-                      >View All Highlights</Button>
+                      >View All Highlights<Icon name='arrow right' /></Button>
                     </Link>
                     : null}
                 </Grid.Column>
               </Grid.Row> : null
             }
-            <Grid.Row style={{ padding: '1em 0 2em' }}>
-              <Grid.Column width='9'>
-                <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
-                  Endorsements
+            {portfolio.endorsements && portfolio.endorsements.length > 0 ?
+              <Grid.Row style={{ padding: '1em 0 2em' }}>
+                <Grid.Column width='9'>
+                  <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                    Endorsements
                 </Header>
-                {portfolio.endorsements.map((endorsement: any) =>
-                  <EndorsementItem key={endorsement.name} endorsement={endorsement} />)}
-              </Grid.Column>
-            </Grid.Row>
+                  {portfolio.endorsements.map((endorsement: any) =>
+                    <EndorsementItem key={endorsement.name} endorsement={endorsement} />)}
+                </Grid.Column>
+              </Grid.Row> : null}
           </Grid>
         </Container>
       </Page>

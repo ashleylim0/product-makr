@@ -40,7 +40,7 @@ export default function About({ portfolio, summary, mdData, mdContent }: {
               <Grid.Column width='9'>
                 {mdData.author && mdData.author.picture ?
                   <Image
-                    alt={mdData.author.name ? mdData.author.name : "Author picture"}
+                    alt={portfolio.name}
                     height={320}
                     width={320}
                     src={mdData.author.picture}

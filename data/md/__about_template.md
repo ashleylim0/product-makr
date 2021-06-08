@@ -23,10 +23,10 @@ Venenatis cras sed felis eget velit. Consectetur libero id faucibus nisl tincidu
 
 # PRODUCT STUFF
 
-## What's my favorite mobile app?
+# What's my favorite mobile app?
 
 My favorite mobile app is... this section is optional. Write other interesting product related questions and put your thoughts here.
 
-## What are your sources of inspiration?
+# What are your sources of inspiration?
 
 My sources of inspiration are...
