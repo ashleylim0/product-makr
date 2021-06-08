@@ -52,10 +52,9 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                     as='a'
                     rel='noopener'
                     size='big'
-                    color='black'
-                    style={{ marginTop: '24px' }}
+                    className='link-button'
                     fluid
-                  >Read More<Icon name='arrow right' /></Button>
+                  >Read more<Icon name='arrow right' /></Button>
                 </Link>
               </Grid.Column>
             </Grid.Row>
@@ -73,10 +72,9 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                         as='a'
                         rel='noopener'
                         size='big'
-                        color='black'
-                        style={{ marginTop: '24px' }}
+                        className='link-button'
                         fluid
-                      >View All Projects<Icon name='arrow right' /></Button>
+                      >View all projects<Icon name='arrow right' /></Button>
                     </Link>
                     : null}
 
@@ -99,10 +97,9 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                         as='a'
                         rel='noopener'
                         size='big'
-                        color='black'
-                        style={{ marginTop: '24px' }}
+                        className='link-button'
                         fluid
-                      >View All Highlights<Icon name='arrow right' /></Button>
+                      >View all highlights<Icon name='arrow right' /></Button>
                     </Link>
                     : null}
                 </Grid.Column>
