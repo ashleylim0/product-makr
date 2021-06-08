@@ -30,7 +30,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
         canonical={`${process.env.PUBLIC_URL}`} />
 
       <Page portfolio={portfolio}>
-        <Container style={{ width: '100vw', margin: '2.2em 0' }}>
+        <Container style={{ width: '100vw', margin: '2.2em 0 5.5em 0' }}>
           <Grid
             style={{ padding: '1.5em 1em 3.5em', }}
             centered
@@ -61,7 +61,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
             {portfolio.projects && portfolio.projects.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Projects
               </Header>
                   {portfolio.projects.slice(0, 3).map((project: any) =>
@@ -85,7 +85,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
             {portfolio.highlights && portfolio.highlights.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Blog &amp; Case Highlights
                 </Header>
                   {portfolio.highlights.slice(0, 3).map((myHighlight: any, index: number) =>
@@ -108,7 +108,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
             {portfolio.endorsements && portfolio.endorsements.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Endorsements
                 </Header>
                   {portfolio.endorsements.map((endorsement: any) =>

@@ -36,7 +36,7 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
         image={shareImage} />
 
       <Page portfolio={portfolio}>
-        <Container style={{ width: '100vw', margin: '2.2em 0' }}>
+        <Container style={{ width: '100vw', margin: '2.2em 0 5.5em 0' }}>
           <Grid
             style={{ padding: '1.5em 1em 3.5em' }}
             centered
@@ -53,25 +53,21 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
                     className='card-image-header'
                   /> : null}
                 {myProject.links.length > 0 ?
-                  <Button.Group widths='5'>
-                    {myProject.links.map((link: any, key) =>
+                    myProject.links.map((link: any, key) =>
                       <Button
                         as='a'
-                        basic
-                        size='big'
+                        fluid
+                        size='large'
                         key={key}
                         href={withHttp(link.url)}
                         target='_blank'
-                        color='black'
-                        style={{ marginTop: '16px' }}
-                        fluid
+                        className='project-button'
                         icon={link.icon}
                         content={link.text}
                         title={link.text}
-                        rel='noopener' />)}
-                  </Button.Group>
+                        rel='noopener' />)
                   : null}
-                <Header style={{ color: '#212121', padding: '0 0.1em', fontSize: '2.5em', wordWrap: 'break-word' }}>
+                <Header style={{ color: '#212121', fontSize: '2.5em', wordWrap: 'break-word' }}>
                   {myProject.title}
                 </Header>
                 {myProject.roles && myProject.roles.length > 0
@@ -98,24 +94,20 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
                   {myProject.summary
                     ? myProject.summary : null}
                 </p>
+                {mdContent ?
+                  <div style={{ fontSize: '2em' }}>
+                    <ReactMarkdown children={mdContent} linkTarget="_blank" />
+                  </div> : null}
               </Grid.Column>
             </Grid.Row>
             {myProject.testimonials && myProject.testimonials.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Testimonials
                 </Header>
                   {myProject.testimonials.map((endorsement: any) =>
                     <EndorsementItem key={endorsement.name} endorsement={endorsement} />)}
-                </Grid.Column>
-              </Grid.Row> : null}
-            {mdContent ?
-              <Grid.Row style={{ padding: '1em 0 2em' }}>
-                <Grid.Column width='9'>
-                  <div style={{ fontSize: '2.2em' }}>
-                    <ReactMarkdown children={mdContent} linkTarget="_blank" />
-                  </div>
                 </Grid.Column>
               </Grid.Row> : null}
           </Grid>

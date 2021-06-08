@@ -14,17 +14,33 @@
     color: #0C5FFF;
     border-radius: 8px;
     margin-top: 24px;
-    padding-left: 0;
     font-weight: normal;
 }
 
 .ui.button.link-button {
-    border: 0.5px solid #1B1C1D;
+    border: 1px solid #1B1C1D;
     background-color: #ffffff;
     color: #1B1C1D;
     border-radius: 8px;
     margin-top: 24px;
-    padding-left: 0;
+    font-weight: normal;
+}
+
+.ui.button.project-button:hover {
+    border: 1px solid #0C5FFF;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #0C5FFF;
+    margin-top: 12px;
+    font-weight: normal;
+}
+
+.ui.button.project-button {
+    border: 1px solid #1B1C1D;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #1B1C1D;
+    margin-top: 12px;
     font-weight: normal;
 }
 
