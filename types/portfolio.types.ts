@@ -24,7 +24,6 @@ export interface Portfolio {
         }
     ],
     theme: {
-        accentColor: string,
         emoji: string,
         quote: string,
         makrCredit: boolean

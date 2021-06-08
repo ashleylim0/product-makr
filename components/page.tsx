@@ -34,9 +34,25 @@ export default function Page({ children, portfolio }: {
           <Menu.Item as='a'>
             <Link href='/about'>
               <div style={{ padding: '0.5em' }} className='sidebar-text'>
-                <Icon name='lightbulb outline' />About Me</div>
+                <Icon name='user outline' />About Me</div>
             </Link>
           </Menu.Item>
+          {portfolio.projects && portfolio.projects.length > 0 ?
+            <Menu.Item as='a'>
+              <Link href='/projects'>
+                <div style={{ padding: '0.5em' }} className='sidebar-text'>
+                  <Icon name='suitcase' />Projects</div>
+              </Link>
+            </Menu.Item>
+            : null}
+          {portfolio.highlights && portfolio.highlights.length > 0 ?
+            <Menu.Item as='a'>
+              <Link href='/highlights'>
+                <div style={{ padding: '0.5em' }} className='sidebar-text'>
+                  <Icon name='star outline' />Highlights</div>
+              </Link>
+            </Menu.Item>
+            : null}
           {portfolio.blog ?
             <Menu.Item
               as='a'
