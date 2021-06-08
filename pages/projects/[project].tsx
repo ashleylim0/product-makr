@@ -2,7 +2,8 @@ import {
   Grid,
   Container,
   Header,
-  Label
+  Label,
+  Button
 } from 'semantic-ui-react';
 import fs from 'fs';
 import path from 'path';
@@ -15,6 +16,7 @@ import { Project } from '../../types/project.types';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
 import EndorsementItem from '../../components/endorsementItem';
+import { withHttp } from '../../util/helpers';
 
 export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
   portfolio: Portfolio,
@@ -50,7 +52,26 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
                     src={myProject.shareImageUrl}
                     className='card-image-header'
                   /> : null}
-                <Header style={{ color: '#212121', padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                {myProject.links.length > 0 ?
+                  <Button.Group widths='5'>
+                    {myProject.links.map((link: any, key) =>
+                      <Button
+                        as='a'
+                        basic
+                        size='big'
+                        key={key}
+                        href={withHttp(link.url)}
+                        target='_blank'
+                        color='black'
+                        style={{ marginTop: '16px' }}
+                        fluid
+                        icon={link.icon}
+                        content={link.text}
+                        title={link.text}
+                        rel='noopener' />)}
+                  </Button.Group>
+                  : null}
+                <Header style={{ color: '#212121', padding: '0 0.1em', fontSize: '2.5em', wordWrap: 'break-word' }}>
                   {myProject.title}
                 </Header>
                 {myProject.roles && myProject.roles.length > 0

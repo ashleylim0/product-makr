@@ -42,7 +42,7 @@ export default function Page({ children, portfolio }: {
               as='a'
               href={withHttp(portfolio.blog)}
               target='_blank'
-              rel="noopener">
+              rel='noopener'>
               <div
                 style={{ padding: '0.5em' }}
                 className='sidebar-text'><Icon name='pencil alternate' />Blog</div>
@@ -52,8 +52,8 @@ export default function Page({ children, portfolio }: {
             <Menu.Item
               as='a'
               href={withHttp(portfolio.podcast)}
-              target="_blank"
-              rel="noopener">
+              target='_blank'
+              rel='noopener'>
               <div
                 style={{ padding: '0.5em' }}
                 className='sidebar-text'><Icon name='podcast' />Podcast</div>
@@ -64,7 +64,7 @@ export default function Page({ children, portfolio }: {
               as='a'
               href={withHttp(portfolio.resume)}
               target='_blank'
-              rel="noopener">
+              rel='noopener'>
               <div
                 style={{ padding: '0.5em' }}
                 className='sidebar-text'><Icon name='file alternate outline' />Resume</div>
@@ -75,7 +75,7 @@ export default function Page({ children, portfolio }: {
               as='a'
               href={withHttp(portfolio.profiles[0].url)}
               target='_blank'
-              rel="noopener">
+              rel='noopener'>
               <div
                 style={{ padding: '0.5em' }}
                 className='sidebar-text'><Icon name='linkedin' />LinkedIn</div>
@@ -86,7 +86,7 @@ export default function Page({ children, portfolio }: {
               as='a'
               href={`mailto:${portfolio.email}`}
               target='_blank'
-              rel="noopener">
+              rel='noopener'>
               <div
                 style={{ padding: '0.5em' }}
                 className='sidebar-text'><Icon name='envelope outline' />Contact</div>
