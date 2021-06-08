@@ -87,7 +87,7 @@
       ],
       "links": [
         {
-          "text": "Visit",
+          "text": "Visit Site",
           "url": "https://vina.dev/rene",
           "icon": "external"
         }
@@ -111,7 +111,7 @@
       ],
       "links": [
         {
-          "text": "Visit",
+          "text": "Visit Site",
           "url": "https://tech.viet.io",
           "icon": "external"
         },
@@ -125,7 +125,7 @@
     },
     {
       "slug": "product-makr",
-      "title": "Product Makr: Open-source Product Manager Portfolios",
+      "title": "Product Makr: Open-source PM Portfolios",
       "summary": "Open-source project to help Product Managers make portfolio pages and improve their job hunt.",
       "shareImageUrl": "",
       "roles": [
@@ -140,7 +140,7 @@
       ],
       "links": [
         {
-          "text": "Visit",
+          "text": "Visit Site",
           "url": "https://product.makr.io",
           "icon": "external"
         },
@@ -188,7 +188,7 @@
         {
           "text": "Download App",
           "url": "https://play.google.com/store/apps/details?id=com.dcrtns.adnotebook",
-          "icon": "google play"
+          "icon": "external"
         },
         {
           "text": "GitHub",
@@ -196,12 +196,7 @@
           "icon": "github"
         }
       ],
-      "testimonials": [
-        {
-          "name": "Jane Smith",
-          "text": "This app is awesome..."
-        }
-      ]
+      "testimonials": []
     }
   ],
   "highlights": [

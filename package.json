@@ -17,7 +17,7 @@
     "canvas": "2.6.1",
     "fomantic-ui": "^2.8.7",
     "gray-matter": "^4.0.3",
-    "next": "10.2.4-canary.4",
+    "next": "10.2.4-canary.5",
     "postcss": "^8.3.0",
     "raw-loader": "^4.0.2",
     "react": "17.0.2",

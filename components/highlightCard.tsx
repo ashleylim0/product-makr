@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Card, Icon } from 'semantic-ui-react';
 import { Highlight } from '../types/highlight.types';
+import { withHttp } from '../util/helpers';
 
 export default function HighlightCard({ myHighlight }: {
   myHighlight: Highlight,
@@ -8,11 +9,14 @@ export default function HighlightCard({ myHighlight }: {
 
   const target = myHighlight.url.startsWith('/highlights/') ? "_self" : "_blank"
   const iconName = myHighlight.url.startsWith('/highlights/') ? "arrow right" : "external"
+  const url = myHighlight.url.startsWith('/highlights/') ? myHighlight.url : withHttp(myHighlight.url)
 
   return (
-    <Link href={`${myHighlight.url}`} passHref>
+    <Link href={url} passHref>
       <Card
         as='a'
+        rel='noopener'
+        title={myHighlight.title} 
         target={target}
         key={myHighlight.slug}
         fluid
