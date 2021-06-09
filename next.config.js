@@ -11,7 +11,7 @@ module.exports = {
         })
         if (isServer) {
             require('./util/generateSiteMap')
-            require('./util/generateOgImage')
+            require('./util/generateShareFavImages')
         }
         return config
     }
