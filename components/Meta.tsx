@@ -20,8 +20,8 @@ export default function Meta(props: SEOProps) {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="HandheldFriendly" content="true" />
       <meta name="theme-color" content={props.color} />
-      <link rel="icon" type="image/png" href={props.icon ? props.icon : "/favicon.ico"} />
-      <link rel="apple-touch-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" href={props.icon ? props.icon : "/favicon.png"} />
+      <link rel="apple-touch-icon" href="/favicon.png" />
       {
         props.css &&
         <link rel="stylesheet" href={props.css} />

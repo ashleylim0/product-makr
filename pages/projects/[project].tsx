@@ -53,19 +53,19 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
                     className='card-image-header'
                   /> : null}
                 {myProject.links.length > 0 ?
-                    myProject.links.map((link: any, key) =>
-                      <Button
-                        as='a'
-                        fluid
-                        size='large'
-                        key={key}
-                        href={withHttp(link.url)}
-                        target='_blank'
-                        className='project-button'
-                        icon={link.icon}
-                        content={link.text}
-                        title={link.text}
-                        rel='noopener' />)
+                  myProject.links.map((link: any, key) =>
+                    <Button
+                      as='a'
+                      fluid
+                      size='large'
+                      key={key}
+                      href={withHttp(link.url)}
+                      target='_blank'
+                      className='project-button'
+                      icon={link.icon}
+                      content={link.text}
+                      title={link.text}
+                      rel='noopener' />)
                   : null}
                 <Header style={{ color: '#212121', fontSize: '2.5em', wordWrap: 'break-word' }}>
                   {myProject.title}
@@ -90,10 +90,12 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
                       </Label>)}
                   </div>
                   : null}
-                <p style={{ fontSize: '2.2em', marginTop: '8px' }}>
-                  {myProject.summary
-                    ? myProject.summary : null}
-                </p>
+                {myProject.summary ?
+                  myProject.summary.split('\n').map((item, i) => {
+                    return <p
+                      key={i}
+                      style={{ fontSize: '2em', marginTop: '8px' }}>{item}</p>;
+                  }) : null}
                 {mdContent ?
                   <div style={{ fontSize: '2em' }}>
                     <ReactMarkdown children={mdContent} linkTarget="_blank" />
