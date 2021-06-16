@@ -11,7 +11,8 @@ export default function LinkButtons({ profiles }: { profiles: any }) {
             style={{ fontSize: '1.33em' }}
             href={withHttp(profile.url)}
             target='_blank'
-            rel="noopener">
+            rel="noopener"
+            title={profile.network}>
             <Icon name={profile.icon ? profile.icon : 'linkify'} /></a>
         </List.Item>)}
     </List>
