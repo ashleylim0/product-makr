@@ -54,7 +54,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                     size='big'
                     className='link-button'
                     fluid
-                  >Read more<Icon name='arrow right' /></Button>
+                  >More about me<Icon name='arrow right' /></Button>
                 </Link>
               </Grid.Column>
             </Grid.Row>
