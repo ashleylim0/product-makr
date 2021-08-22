@@ -10,7 +10,7 @@ export default function EndorsementItem({ endorsement }: {
       <Card fluid key={endorsement.name} style={{ boxShadow: 'none' }}>
         {endorsement.text ? <Card.Content textAlign='left'>
           <p className='endorsement-text'>
-            "{endorsement.text}"
+            {`"${endorsement.text}"`}
           </p>
           <p style={{ color: '#959595', fontStyle: 'italic', fontSize: '1.33em' }}>— {endorsement.name}</p>
         </Card.Content> : null}

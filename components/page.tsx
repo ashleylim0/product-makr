@@ -32,14 +32,14 @@ export default function Page({ children, portfolio }: {
               <Icon name='close' /></div>
           </Menu.Item>
           <Menu.Item as='a'>
-            <Link href='/about'>
+            <Link href='/about' passHref>
               <div style={{ padding: '0.5em' }} className='sidebar-text'>
                 <Icon name='user outline' />About Me</div>
             </Link>
           </Menu.Item>
           {portfolio.projects && portfolio.projects.length > 0 ?
             <Menu.Item as='a'>
-              <Link href='/projects'>
+              <Link href='/projects' passHref>
                 <div style={{ padding: '0.5em' }} className='sidebar-text'>
                   <Icon name='suitcase' />Projects</div>
               </Link>
@@ -47,7 +47,7 @@ export default function Page({ children, portfolio }: {
             : null}
           {portfolio.highlights && portfolio.highlights.length > 0 ?
             <Menu.Item as='a'>
-              <Link href='/highlights'>
+              <Link href='/highlights' passHref>
                 <div style={{ padding: '0.5em' }} className='sidebar-text'>
                   <Icon name='star outline' />Highlights</div>
               </Link>

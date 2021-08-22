@@ -98,7 +98,9 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
                   }) : null}
                 {mdContent ?
                   <div style={{ fontSize: '2em' }}>
-                    <ReactMarkdown children={mdContent} linkTarget="_blank" />
+                    <ReactMarkdown linkTarget="_blank">
+                      {mdContent}
+                    </ReactMarkdown>
                   </div> : null}
               </Grid.Column>
             </Grid.Row>
@@ -107,7 +109,7 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
                 <Grid.Column width='9'>
                   <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Testimonials
-                </Header>
+                  </Header>
                   {myProject.testimonials.map((endorsement: any) =>
                     <EndorsementItem key={endorsement.name} endorsement={endorsement} />)}
                 </Grid.Column>

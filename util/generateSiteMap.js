@@ -1,9 +1,9 @@
 const fs = require('fs');
+const { join } = require('path');
 const globby = require('globby');
-const path = require('path');
 
 async function generateSiteMap() {
-  const portfolioFilePath = path.join(process.cwd(), '/data/me.json');
+  const portfolioFilePath = join(process.cwd(), '/data/me.json');
   const fileContents = fs.readFileSync(portfolioFilePath, 'utf8');
   const portfolio = JSON.parse(fileContents);
 
