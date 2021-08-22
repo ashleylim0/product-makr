@@ -8,6 +8,42 @@
     /* Gecko Browsers */
 }
 
+.ui.button.link-button:hover {
+    border: 1px solid #0C5FFF;
+    background-color: #ffffff;
+    color: #0C5FFF;
+    border-radius: 8px;
+    margin-top: 24px;
+    font-weight: normal;
+}
+
+.ui.button.link-button {
+    border: 1px solid #1B1C1D;
+    background-color: #ffffff;
+    color: #1B1C1D;
+    border-radius: 8px;
+    margin-top: 24px;
+    font-weight: normal;
+}
+
+.ui.button.project-button:hover {
+    border: 1px solid #0C5FFF;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #0C5FFF;
+    margin-top: 12px;
+    font-weight: normal;
+}
+
+.ui.button.project-button {
+    border: 1px solid #1B1C1D;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #1B1C1D;
+    margin-top: 12px;
+    font-weight: normal;
+}
+
 .ui.label.role-label {
     display: inline-block;
     font-size: 1.22em;
@@ -128,7 +164,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     /* number of lines to show */
-    -webkit-line-clamp: 5;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 

@@ -30,7 +30,7 @@ export default function About({ portfolio, summary, mdData, mdContent }: {
         canonical={`${process.env.PUBLIC_URL}/about`} />
 
       <Page portfolio={portfolio}>
-        <Container style={{ width: '100vw', margin: '2.2em 0' }}>
+        <Container style={{ width: '100vw', margin: '2.2em 0 5.5em 0' }}>
           <Grid
             style={{ padding: '1.5em 1em 3.5em' }}
             centered
@@ -46,11 +46,13 @@ export default function About({ portfolio, summary, mdData, mdContent }: {
                     src={mdData.author.picture}
                     className='card-image-header'
                   /> : null}
-                <Header style={{ color: '#212121', padding: '0 0.1em', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                <Header style={{ color: '#212121', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                   {mdData.title ? mdData.title : "About Me"}
                 </Header>
-                <div style={{ fontSize: '2.2em' }} >
-                  <ReactMarkdown children={mdContent} linkTarget="_blank" />
+                <div style={{ fontSize: '2em' }} >
+                  <ReactMarkdown linkTarget="_blank">
+                    {mdContent}
+                  </ReactMarkdown>
                 </div>
               </Grid.Column>
             </Grid.Row>
@@ -76,7 +78,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   // Creates markdown free summary for SEO description
   let summary: string;
-  remark().use(strip).process(portfolio.summary, function (err, file) {
+  remark().use(strip).process(portfolio.summary, function (err: any, file: any) {
     if (err) throw err
     summary = String(file)
   })

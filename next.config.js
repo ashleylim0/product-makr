@@ -1,8 +1,4 @@
 module.exports = {
-    future: {
-        webpack5: true,
-        strictPostcssConfiguration: true
-    },
     target: 'serverless',
     webpack: function (config, { isServer }) {
         config.module.rules.push({
@@ -11,7 +7,7 @@ module.exports = {
         })
         if (isServer) {
             require('./util/generateSiteMap')
-            require('./util/generateOgImage')
+            require('./util/generateShareFavImages')
         }
         return config
     }

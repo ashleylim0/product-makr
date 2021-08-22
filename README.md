@@ -11,7 +11,7 @@ First, run the development server:
 
 ```bash
 npm install
-# Make sure Semantic-UI is built at least once using now-dev (also run this anytime you change the global Semantic site.variables file)
+# Make sure Semantic-UI is built when you change the global Semantic site.variables file
 npm run now-dev
 # All times after you can use dev
 npm run dev
@@ -21,7 +21,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Connect
 
-Feel free to connect with me on [LinkedIn](https://linkedin.com/in/renedeanda). I'm currently looking for a full-time Product Manager position.
+Feel free to connect with me on [LinkedIn](https://linkedin.com/in/renedeanda).
 
 ## License
 Product Makr is distributed under the MIT license. See [LICENSE](https://github.com/renedeanda/product-makr/blob/master/LICENSE.md) for details.

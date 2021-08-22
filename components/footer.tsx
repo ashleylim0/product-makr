@@ -28,7 +28,9 @@ export default function Footer({ portfolio }: {
             <a
               style={{ fontSize: '1.1em' }}
               className='card-link'
-              href='https://product.makr.io' target='_blank' rel="noopener">
+              href='https://product.makr.io'
+              target='_blank'
+              rel='noopener noreferrer'>
               <b>Makr Built 🖤</b></a> : null
           }
         </Container>
