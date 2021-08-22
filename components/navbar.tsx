@@ -51,7 +51,7 @@ export default function Navbar({ openDrawer, portfolio }: {
             {portfolio.blog ? <List.Item>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={withHttp(portfolio.blog)}
                 className='nav-button-text'>
                 Blog</a>
@@ -59,7 +59,7 @@ export default function Navbar({ openDrawer, portfolio }: {
             {portfolio.podcast ? <List.Item>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={withHttp(portfolio.podcast)}
                 className='nav-button-text'>
                 Podcast</a>
@@ -67,7 +67,7 @@ export default function Navbar({ openDrawer, portfolio }: {
             {portfolio.resume ? <List.Item>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={withHttp(portfolio.resume)}
                 className='nav-button-text'>
                 Resume</a>
@@ -75,7 +75,7 @@ export default function Navbar({ openDrawer, portfolio }: {
             {portfolio.profiles[0] && portfolio.profiles[0].network == 'LinkedIn' ? <List.Item>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={withHttp(portfolio.profiles[0].url)}
                 className='nav-button-text'>
                 LinkedIn</a>
@@ -83,7 +83,7 @@ export default function Navbar({ openDrawer, portfolio }: {
             {portfolio.email ? <List.Item>
               <a
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 href={`mailto:${portfolio.email}`}
                 className='nav-button-text'>
                 Contact</a>

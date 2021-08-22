@@ -45,7 +45,9 @@ export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent 
                 </Header>
                 {mdContent ?
                   <div style={{ fontSize: '2em' }}>
-                    <ReactMarkdown children={mdContent} linkTarget="_blank" />
+                    <ReactMarkdown linkTarget="_blank">
+                      {mdContent}
+                    </ReactMarkdown>
                   </div> : null}
               </Grid.Column>
             </Grid.Row>
