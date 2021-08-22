@@ -50,7 +50,9 @@ export default function About({ portfolio, summary, mdData, mdContent }: {
                   {mdData.title ? mdData.title : "About Me"}
                 </Header>
                 <div style={{ fontSize: '2em' }} >
-                  <ReactMarkdown children={mdContent} linkTarget="_blank" />
+                  <ReactMarkdown linkTarget="_blank">
+                    {mdContent}
+                  </ReactMarkdown>
                 </div>
               </Grid.Column>
             </Grid.Row>
@@ -76,7 +78,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   // Creates markdown free summary for SEO description
   let summary: string;
-  remark().use(strip).process(portfolio.summary, function (err, file) {
+  remark().use(strip).process(portfolio.summary, function (err: any, file: any) {
     if (err) throw err
     summary = String(file)
   })

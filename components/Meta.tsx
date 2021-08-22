@@ -44,10 +44,6 @@ export default function Meta(props: SEOProps) {
         props.canonical &&
         <link rel="canonical" href={props.canonical} />
       }
-      {
-        props.js &&
-        <script type="text/javascript" src={props.js}></script>
-      }
     </Head>
   )
 }

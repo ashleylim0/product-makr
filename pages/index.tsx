@@ -39,13 +39,15 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
             <Grid.Row style={{ padding: '1em 0.5em 2em' }}>
               <Grid.Column width='9'>
                 <Header style={{ fontSize: '2.7em' }}>
-                  Hi, I'm {portfolio.name.split(' ')[0]} {portfolio.theme.emoji ? portfolio.theme.emoji : "👋"}
+                  {`Hi, I'm ${portfolio.name.split(' ')[0]}`} {portfolio.theme.emoji ? portfolio.theme.emoji : "👋"}
                 </Header>
                 <h1 style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                   {portfolio.title}
                 </h1>
                 <div style={{ fontSize: '2.2em' }} >
-                  <ReactMarkdown children={portfolio.summary} linkTarget="_blank" />
+                  <ReactMarkdown linkTarget="_blank">
+                    {portfolio.summary}
+                  </ReactMarkdown>
                 </div>
                 <Link href='/about' passHref>
                   <Button
@@ -63,7 +65,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                 <Grid.Column width='9'>
                   <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Projects
-              </Header>
+                  </Header>
                   {portfolio.projects.slice(0, 3).map((project: any) =>
                     <ProjectCard key={project.slug} project={project} />)}
                   {portfolio.projects.length > 3 ?
@@ -87,7 +89,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                 <Grid.Column width='9'>
                   <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Blog &amp; Case Highlights
-                </Header>
+                  </Header>
                   {portfolio.highlights.slice(0, 3).map((myHighlight: any, index: number) =>
                     <HighlightCard key={myHighlight.slug} myHighlight={myHighlight} />
                   )}
@@ -110,7 +112,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
                 <Grid.Column width='9'>
                   <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Endorsements
-                </Header>
+                  </Header>
                   {portfolio.endorsements.map((endorsement: any) =>
                     <EndorsementItem key={endorsement.name} endorsement={endorsement} />)}
                 </Grid.Column>
@@ -132,7 +134,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   // Creates markdown free summary for SEO description
   let summary: string;
-  remark().use(strip).process(portfolio.summary, function (err, file) {
+  remark().use(strip).process(portfolio.summary, function (err: any, file: any) {
     if (err) throw err
     summary = String(file)
   })
