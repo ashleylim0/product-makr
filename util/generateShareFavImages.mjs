@@ -1,17 +1,18 @@
-const fs = require('fs');
-const path = require('path');
-const { createCanvas } = require('canvas');
+import { readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
+import canvas from 'canvas';
 
 async function generateShareFavImages() {
-  const portfolioFilePath = path.join(process.cwd(), '/data/me.json');
-  const fileContents = fs.readFileSync(portfolioFilePath, 'utf8');
+  const { createCanvas } = canvas;
+  const portfolioFilePath = join(process.cwd(), '/data/me.json');
+  const fileContents = readFileSync(portfolioFilePath, 'utf8');
   const portfolio = JSON.parse(fileContents);
 
   //Load name, title, and image background color from portfolio json file
   const name = portfolio.name ? portfolio.name : '';
   const title = portfolio.title ? portfolio.title : '';
   const nameArr = portfolio.name ? portfolio.name.split(' ') : null;
-  const initials = nameArr && nameArr.length > 0 ? `${nameArr[0].split('')[0]}${nameArr[1].split('')[0]}` : 'PM';
+  const initials = nameArr && nameArr.length > 0 ? `${nameArr[0].split('')[0]}${nameArr[1] ? nameArr[1].split('')[0] : ''}` : 'PM';
 
   // dimension of our image
   const shareWidth = 1200;
@@ -51,8 +52,8 @@ async function generateShareFavImages() {
   const favBuffer = favCanvas.toBuffer('image/png');
 
 
-  fs.writeFileSync('./public/share.png', shareBuffer);
-  fs.writeFileSync('./public/favicon.png', favBuffer);
+  writeFileSync('./public/share.png', shareBuffer);
+  writeFileSync('./public/favicon.png', favBuffer);
 };
 
 generateShareFavImages();
