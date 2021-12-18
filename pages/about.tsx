@@ -12,7 +12,7 @@ import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
-import remark from 'remark';
+import { remark } from 'remark';
 import strip from 'strip-markdown';
 
 export default function About({ portfolio, summary, mdData, mdContent }: {
