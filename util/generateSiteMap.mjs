@@ -1,10 +1,10 @@
-const fs = require('fs');
-const { join } = require('path');
-const globby = require('globby');
+import { readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
+import { globby } from 'globby';
 
 async function generateSiteMap() {
   const portfolioFilePath = join(process.cwd(), '/data/me.json');
-  const fileContents = fs.readFileSync(portfolioFilePath, 'utf8');
+  const fileContents = readFileSync(portfolioFilePath, 'utf8');
   const portfolio = JSON.parse(fileContents);
 
   //Load project paths from portfolio json file
@@ -55,7 +55,7 @@ async function generateSiteMap() {
       .join('')}
       </urlset>`
 
-  fs.writeFileSync('public/sitemap.xml', sitemap);
+  writeFileSync('public/sitemap.xml', sitemap);
 }
 
 generateSiteMap();

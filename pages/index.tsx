@@ -6,7 +6,7 @@ import {
   Icon
 } from 'semantic-ui-react';
 import ReactMarkdown from 'react-markdown';
-import remark from 'remark';
+import { remark } from 'remark';
 import strip from 'strip-markdown';
 import fs from 'fs';
 import path from 'path';

@@ -16,7 +16,9 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "node_modules"
@@ -26,6 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     "util/generateSiteMap.mjs",
-    "lib/gtag.ts"
+    "lib/gtag.ts",
+    "util/generateShareFavImages.mjs"
   ]
 }

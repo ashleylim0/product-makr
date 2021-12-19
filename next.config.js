@@ -1,13 +1,12 @@
 module.exports = {
-    target: 'serverless',
     webpack: function (config, { isServer }) {
         config.module.rules.push({
             test: /\.md$/,
             use: 'raw-loader',
         })
         if (isServer) {
-            require('./util/generateSiteMap')
-            require('./util/generateShareFavImages')
+            import('./util/generateSiteMap.mjs')
+            import('./util/generateShareFavImages.mjs')
         }
         return config
     }
