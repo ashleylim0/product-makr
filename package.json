@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run semantic:build && next build",
+    "build": "next build",
+    "build:semantic": "npm run semantic:build && next build",
     "start": "next start",
     "now-dev": "npm run semantic:build && next dev",
     "export": "next export",
