@@ -5,8 +5,8 @@ module.exports = {
             use: 'raw-loader',
         })
         if (isServer) {
-            require('./util/generateSiteMap')
-            require('./util/generateShareFavImages')
+            import('./util/generateSiteMap.mjs')
+            import('./util/generateShareFavImages.mjs')
         }
         return config
     }
