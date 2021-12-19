@@ -27,6 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     "util/generateSiteMap.mjs",
-    "lib/gtag.ts"
+    "lib/gtag.ts",
+    "util/generateShareFavImages.mjs"
   ]
 }
