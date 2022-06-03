@@ -20,7 +20,7 @@ export default function ProjectsContainer({ projects }: {
         verticalAlign='middle'>
         <Grid.Row style={{ padding: '0 0 5em' }}>
           <Grid.Column width='9'>
-            <Header style={{ color: '#212121', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+            <Header style={{ color: '#212121', fontSize: '2.2em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
               Projects
                 </Header>
             {projects.map((item: any) =>
