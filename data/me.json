@@ -2,7 +2,7 @@
   "name": "René",
   "email": "rene@deanda.org",
   "title": "Product Manager",
-  "summary": "I'm a jack of all trades, master of none. I love to learn new things by *[reading](https://goodreads.com/renedeanda)*, listening to *[podcasts](https://rede.io/what-startup-tech-podcasts/)*, asking lots of questions, and building new things that help others. I also love *[photography](https://unsplash.com/@renedeanda)*. Welcome!",
+  "summary": "I'm a jack of all trades, master of none. Currently, I am a product manager at Microsoft. I love to learn new things by *[reading](https://goodreads.com/renedeanda)*, listening to *[podcasts](https://rede.io/what-startup-tech-podcasts/)*, asking lots of questions, and building new things that help others. I also love *[photography](https://unsplash.com/@renedeanda)*. Welcome!",
   "blog": "https://rede.io",
   "podcast": "",
   "resume": "",
@@ -62,7 +62,6 @@
           "name": "Delightful User",
           "text": "I love using this app as my gratitude journal. It has a beautiful and easy to use design with no unnecessary bells and whistles. The quote of the day is thought provoking and inspirational. What I love most though is the prompts ... Great app!"
         }
-        
       ]
     },
     {
@@ -209,36 +208,7 @@
       "shareImageUrl": ""
     }
   ],
-  "endorsements": [
-    {
-      "name": "Bob Pike, International Fitness Expert, PikesFitness.com",
-      "text": "I have the privilege of currently working closely with René to relaunch my personal brand and home fitness program online. He has proven to me his knowledge and skill when creating my new marketing strategy powered by new technologies. René has been easy to work with and increased my limited knowledge clearly explaining the full functionality of his process. He took the necessary time to learn my story and adapt it for my online presence. With his experience in marketing, technology, and ability to communicate & explain complex topics, you won’t go wrong choosing René to join your team."
-    },
-    {
-      "name": "Dr. Andrew Hosmanek, Professor & Attorney, HawkeyeLaw",
-      "text": "I have had the pleasure of knowing René for several years now, and being a mentor to him. He was one of my outstanding MBA students, and we made a real connection that has continued since his graduation. René is creative, hard-working, open-minded, and super intelligent. In addition to establishing a strong record of employment in business, he has started a number of really interesting projects geared toward helping people and improving the world. Over the past several years I have seen him grow and mature as a businessperson, focus his ideas, and create fascinating products. I highly recommend working with René. He has global experience combined with a Midwestern work ethic and kindness."
-    },
-    {
-      "name": "Rachael Guerriere, Program Manager, Lockheed Martin",
-      "text": "René has always been an innovative, hardworking, project-oriented teammate and climbing professional colleague. It was a great honor to start our professional careers together as interns at Verizon working cross-collaboratively in a virtual environment across the U.S. in the 2000s. René developed research and project management skills through our intern project where we had to engage with other interns on phone calls to finish leadership presentations and complete a white paper on remote work, mobility, and telecommuting. Clearly, we were 10 years ahead of the trend :) I have confidence in René's ability to manage a project working with people across regions to deliver products and results...just as he did early in his career. Can't wait to see what company is lucky to gain such a valuable asset to their organization!"
-    },
-    {
-      "name": "Michael Williams, Manager Ops Talent Acquisition, Amazon",
-      "text": "René was a team leader in the Iowa MBA Consulting program. René's curiosity and willingness to learn stand out as strengths. He questions decisions thoughtfully and searches for the larger issues to solve when presented with problems. That mentality will continue to serve René and future employers well in the the future."
-    },
-    {
-      "name": "George Zastrow, Data Solutions Engineer, Verizon Wireless",
-      "text": "I immediately recognized and admired René's eagerness to learn, his organizational skills and his ability to listen and identify the needs of our customers. The solutions that René helped design and implement while we worked together at Verizon Wireless reflect the qualities of a solutions architect and engineer looking to do the right things, not only for our customers but also keeping in mind the Verizon Wireless network. René is very passionate and has a desire to do things well. He is a dedicated, hard-working and has a strong aspiration to learn and grow."
-    },
-    {
-      "name": "Sammy Abusada, Supply Chain Manager, HNI",
-      "text": "I would like to take this opportunity to recommend René DeAnda. I have worked with René on critical projects for HNI. I know him well in terms of his technical expertise and I assure you about him for having all good skills required to preform complicated tasks. He has incredible team work and leadership characteristics. René has a wonderful personality with full enthusiasm as well as inspiring and motivating personality. I highly recommend René and hope you will carefully consider him for any opportunity."
-    },
-    {
-      "name": "Sharon Blevins, Project Manager, Verizon",
-      "text": "René came to my group in Verizon's data center department as his post-college career training program. He was extremely diligent in learning the ins and outs of setting up new corporate client’s leased colocation spaces and how to transition them to ongoing support. I have the upmost respect for his work ethic and attention to all details, as well as his newer endeavors developing an innovative app. I highly recommend him to any employer."
-    }
-  ],
+  "endorsements": [],
   "theme": {
     "emoji": "🔭",
     "quote": "\"Be yourself; everyone else is already taken.\" - Oscar Wilde",

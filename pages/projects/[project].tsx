@@ -67,7 +67,7 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
                       title={link.text}
                       rel='noopener' />)
                   : null}
-                <Header style={{ color: '#212121', fontSize: '2.5em', wordWrap: 'break-word' }}>
+                <Header style={{ color: '#212121', fontSize: '2.2em', wordWrap: 'break-word' }}>
                   {myProject.title}
                 </Header>
                 {myProject.roles && myProject.roles.length > 0
@@ -94,10 +94,10 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
                   myProject.summary.split('\n').map((item, i) => {
                     return <p
                       key={i}
-                      style={{ fontSize: '2em', marginTop: '8px' }}>{item}</p>;
+                      style={{ fontSize: '1.5em', marginTop: '8px' }}>{item}</p>;
                   }) : null}
                 {mdContent ?
-                  <div style={{ fontSize: '2em' }}>
+                  <div style={{ fontSize: '1.5em' }}>
                     <ReactMarkdown linkTarget="_blank">
                       {mdContent}
                     </ReactMarkdown>
@@ -107,7 +107,7 @@ export default function MyProject({ portfolio, myProject, mdData, mdContent }: {
             {myProject.testimonials && myProject.testimonials.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ fontSize: '2.2em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Testimonials
                   </Header>
                   {myProject.testimonials.map((endorsement: any) =>

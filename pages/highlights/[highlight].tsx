@@ -40,11 +40,11 @@ export default function MyHighlight({ portfolio, myHighlight, mdData, mdContent 
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '1em 0.5em 2em' }}>
               <Grid.Column width='9'>
-                <Header style={{ color: '#212121', fontSize: '2.5em', wordWrap: 'break-word' }}>
+                <Header style={{ color: '#212121', fontSize: '2.2em', wordWrap: 'break-word' }}>
                   {myHighlight.title}
                 </Header>
                 {mdContent ?
-                  <div style={{ fontSize: '2em' }}>
+                  <div style={{ fontSize: '1.5em' }}>
                     <ReactMarkdown linkTarget="_blank">
                       {mdContent}
                     </ReactMarkdown>

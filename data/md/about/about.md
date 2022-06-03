@@ -5,7 +5,7 @@ author:
   picture: '/images/about/me.jpg'
 ---
 
-I'm a jack of all trades, master of none. I love to learn new things by *[reading](https://goodreads.com/renedeanda "Goodreads")*, listening to *[podcasts](https://rede.io/what-startup-tech-podcasts/)*, asking lots of questions, and building new things that help others. I also love *[photography](https://unsplash.com/@renedeanda "Unsplash")*.
+I'm a jack of all trades, master of none. Currently, I am a product manager at Microsoft. I love to learn new things by *[reading](https://goodreads.com/renedeanda "Goodreads")*, listening to *[podcasts](https://rede.io/what-startup-tech-podcasts/)*, asking lots of questions, and building new things that help others. I also love *[photography](https://unsplash.com/@renedeanda "Unsplash")*.
 
 I taught myself to code and *[build products](/projects "projects")* by watching tutorials on the internet and by just building. My most popular app is the *[Delightful gratitude journal app](https://delightfuljournal.com "Delightful")*.
 
