@@ -38,13 +38,13 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
             verticalAlign='middle'>
             <Grid.Row style={{ padding: '1em 0.5em 2em' }}>
               <Grid.Column width='9'>
-                <Header style={{ fontSize: '2.7em' }}>
+                <Header style={{ fontSize: '2.5em' }}>
                   {`Hi, I'm ${portfolio.name.split(' ')[0]}`} {portfolio.theme.emoji ? portfolio.theme.emoji : "👋"}
                 </Header>
-                <h1 style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                <h1 style={{ fontSize: '2.2em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                   {portfolio.title}
                 </h1>
-                <div style={{ fontSize: '2.2em' }} >
+                <div style={{ fontSize: '2em' }} >
                   <ReactMarkdown linkTarget="_blank">
                     {portfolio.summary}
                   </ReactMarkdown>
@@ -63,7 +63,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
             {portfolio.projects && portfolio.projects.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ fontSize: '2.2em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Projects
                   </Header>
                   {portfolio.projects.slice(0, 3).map((project: any) =>
@@ -87,7 +87,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
             {portfolio.highlights && portfolio.highlights.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ fontSize: '2.2em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Blog &amp; Case Highlights
                   </Header>
                   {portfolio.highlights.slice(0, 3).map((myHighlight: any, index: number) =>
@@ -110,7 +110,7 @@ export default function Home({ portfolio, summary }: { portfolio: Portfolio, sum
             {portfolio.endorsements && portfolio.endorsements.length > 0 ?
               <Grid.Row style={{ padding: '1em 0 2em' }}>
                 <Grid.Column width='9'>
-                  <Header style={{ fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                  <Header style={{ fontSize: '2.2em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                     Endorsements
                   </Header>
                   {portfolio.endorsements.map((endorsement: any) =>

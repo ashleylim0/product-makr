@@ -46,10 +46,10 @@ export default function About({ portfolio, summary, mdData, mdContent }: {
                     src={mdData.author.picture}
                     className='card-image-header'
                   /> : null}
-                <Header style={{ color: '#212121', fontSize: '2.5em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
+                <Header style={{ color: '#212121', fontSize: '2.2em', textTransform: 'uppercase', wordWrap: 'break-word' }}>
                   {mdData.title ? mdData.title : "About Me"}
                 </Header>
-                <div style={{ fontSize: '2em' }} >
+                <div style={{ fontSize: '1.5em' }} >
                   <ReactMarkdown linkTarget="_blank">
                     {mdContent}
                   </ReactMarkdown>
