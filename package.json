@@ -15,7 +15,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "canvas": "2.9.1",
+    "canvas": "2.6.1",
     "fomantic-ui": "^2.8.8",
     "gray-matter": "^4.0.3",
     "next": "12.1.6",
